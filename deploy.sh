@@ -2,5 +2,5 @@
 hugo
 
 # Deploy on Surge
-surge deploy -p ./public --domain http://zerotocode.org
+surge deploy -p ./public --domain zerotocode.org
 
