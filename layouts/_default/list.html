@@ -1,13 +1,24 @@
 {{ define "main" }}
 
 <main aria-role="main">
-    <h1>List</h1>
-    <div>
-        <!-- Note that .Pages is the same as .Site.RegularPages on the homepage template. -->
-        {{ range first 10 .Pages }}
-        {{ .Render "summary"}}
-        {{ end }}
-    </div>
+    <section class="hero">
+        <div class="overlay">
+            <h1>{{ .Title }}</h1>
+            <div class="tagline serif">{{ .Params.Tagline }}</div>
+            <p>{{ .Content }}</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="overlay">
+            {{ range (.Pages.ByParam "order") }}
+            <a href="{{.Permalink}}">
+                <h2>{{ .Title }}</h2>
+                <p>{{ .Summary }}</p>
+            </a>
+            {{ end }}
+        </div>
+    </section>
 </main>
 
 {{ end }}

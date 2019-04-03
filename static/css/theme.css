@@ -1,6 +1,6 @@
 body {
-    --cf-accent: purple;
-    --cf-background: lavender;
+    --cf-accent: #4e28bf;
+    --cf-background: #d4d2f5;
 }
 
 header {
@@ -180,6 +180,10 @@ section {
 section h2 {
     position: relative;
     font-size: 2em;
+}
+
+section a:hover h2 {
+    text-decoration: underline;
 }
 
 section h2::before {

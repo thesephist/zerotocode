@@ -3,6 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://zerotocode.org/milestones/introduction-to-css/</loc>
+    <lastmod>2019-04-03T09:11:18-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zerotocode.org/milestones/introduction-to-html/</loc>
+    <lastmod>2019-04-03T09:11:18-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zerotocode.org/milestones/overview/</loc>
+    <lastmod>2019-04-03T09:11:18-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zerotocode.org/about/</loc>
+    <lastmod>2019-04-03T01:11:34-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zerotocode.org/milestones/</loc>
+    <lastmod>2019-04-03T01:11:34-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://zerotocode.org/</loc>
     <lastmod>2019-04-03T01:11:34-07:00</lastmod>
   </url>
