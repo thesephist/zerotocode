@@ -1,0 +1,271 @@
+body {
+    --cf-accent: purple;
+    --cf-background: lavender;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    padding: 4px;
+    background: var(--cf-background);
+    border-bottom: 4px solid var(--cf-black);
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 1;
+    overflow-x: auto;
+}
+
+.button {
+    white-space: nowrap;
+}
+
+.milestonesButton {
+    color: var(--cf-accent);
+}
+
+p {
+    max-width: 700px;
+}
+
+p a {
+    text-decoration: underline;
+    color: var(--cf-accent);
+    cursor: pointer;
+}
+
+.serif,
+h1,
+h2,
+h3,
+q {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-weight: bold;
+}
+
+/* INDEX PAGE */
+
+section {
+    overflow: hidden;
+}
+
+.hero {
+    padding-top: 16px;
+}
+
+.hero h1 {
+    font-size: 2em;
+    color: var(--cf-accent);
+    margin-bottom: 8px;
+}
+
+.overlay {
+    width: 94%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tagline {
+    font-size: 3.5em;
+    margin-bottom: 32px;
+
+    /* BEFORE/AFTER ANIMATED SQUARES */
+    position: relative;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.tagline::before {
+    content: '';
+    display: block;
+    background: var(--cf-background);
+    height: 2.5em;
+    width: 2.5em;
+    position: absolute;
+    left: -1.2em;
+    top: .8em;
+    border-radius: 6px;
+    z-index: -1;
+    animation: rotate 60s infinite;
+}
+
+.tagline::after{
+    content: '';
+    display: block;
+    background: var(--cf-background);
+    height: .8em;
+    width: .8em;
+    position: absolute;
+    right: -.4em;
+    top: .2em;
+    border-radius: 6px;
+    z-index: -1;
+    animation: rotate 50s infinite;
+}
+
+.ctaButtons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: -4px;
+    flex-wrap: wrap;
+}
+
+.ctaButtons {
+    font-size: 1.4em;
+}
+
+/* SHOWCASE CAROUSEL */
+
+.carousel {
+    overflow-x: auto;
+}
+
+.carouselScroller {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 6vw;
+    position: relative;
+}
+
+.carouselScroller .lastPad {
+    height: 1px;
+    width: 6vw;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.carouselFrame {
+    height: 48vh;
+    max-height: 400px;
+    width: 48vh;
+    max-width: 450px;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.carouselFrame iframe {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.carouselLabel {
+    position: absolute;
+    top: 2px;
+    right: 8px;
+    left: unset;
+    bottom: unset;
+    font-size: .9em;
+}
+
+/* SECTIONS */
+
+section h2 {
+    position: relative;
+    font-size: 2em;
+}
+
+section h2::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: -30px;
+
+    height: 18px;
+    width: 18px;
+    background: var(--cf-accent);
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+section h2::after{
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: -26px;
+
+    height: 14px;
+    width: 14px;
+    background: var(--cf-background);
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+section h3 {
+    font-size: 1.4em;
+    color: var(--cf-accent);
+}
+
+section p {
+    margin-bottom: 32px;
+}
+
+.liveEditorContainer {
+    min-height: 480px;
+    max-height: 600px;
+    height: 52vh;
+    padding: 0;
+    width: calc(100% - 10px);
+
+}
+
+.liveEditorContainer iframe {
+    height: 100%;
+    width: 100%;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: right;
+    margin: 50px 0;
+    line-height: 1.5em;
+}
+
+footer a {
+    color: var(--cf-accent);
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 500px) {
+    .hero h1 {
+        font-size: 1.6em;
+    }
+    .tagline {
+        font-size: 2.2em;
+    }
+    section h2 {
+        font-size: 1.6em;
+    }
+    section h3 {
+        font-size: 1.2em;
+    }
+    .carouselScroller {
+        padding-left: 8px;
+    }
+    .carouselScroller .lastPad {
+        width: 8px;
+    }
+}
+
+
