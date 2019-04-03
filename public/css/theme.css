@@ -158,6 +158,7 @@ section {
     max-width: 450px;
     flex-grow: 0;
     flex-shrink: 0;
+    padding: 0;
 }
 
 .carouselFrame iframe {
