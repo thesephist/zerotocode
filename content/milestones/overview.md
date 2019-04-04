@@ -89,6 +89,12 @@ MDN is the _de facto_ documentation site for HTML, CSS, and JavaScript. It can b
 
 ### Stack Overflow
 
-### CSS-Tricks
+Stack Overflow is a question-and-answer site for developers of all kinds -- not just web developers -- and almost every developer turns to it when they can't troubleshoot or debug an issue on their own. It's just as useful a resource or us as we explore HTML, CSS, and JavaScript. Stack Overflow is great for answer questions like "How do I do X in HTML/CSS?" or "What function do I use to do Y in JavaScript?"
 
-### Dribbble
+### CSS Tricks
+
+CSS Tricks is a blog dedicated specifically to design on the web. It covers actual "tricks" in CSS to achieve certain design styles, but it also contains lots of generally useful web design advice. Often, if you're looking for a way to achieve a specific visual effect with CSS, CSS Tricks is a good destination.
+
+### W3Schools
+
+W3Schools is a tutorial site that covers the basics of HTML, CSS, and JavaScript in a friendlier language than MDN might, so it's a good resource as you're starting out to learn about these technologies.

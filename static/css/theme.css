@@ -296,7 +296,8 @@ ul li::before {
     font-family: 'Menlo', 'Monaco', monospace;
 }
 
-p > code {
+p > code,
+li > code {
     font-family: 'Menlo', 'Monaco', monospace;
     background: var(--cf-background);
     border-radius: 3px;

@@ -12,22 +12,13 @@
     
     
     <item>
-      <title>Introduction to CSS</title>
-      <link>https://zerotocode.org/milestones/introduction-to-css/</link>
-      <pubDate>Wed, 03 Apr 2019 09:11:18 -0700</pubDate>
-      
-      <guid>https://zerotocode.org/milestones/introduction-to-css/</guid>
-      <description>Introduction to CSS bruh.</description>
-    </item>
-    
-    <item>
-      <title>Introduction to HTML</title>
+      <title>About page: Intro to HTML &amp; CSS</title>
       <link>https://zerotocode.org/milestones/introduction-to-html/</link>
       <pubDate>Wed, 03 Apr 2019 09:11:18 -0700</pubDate>
       
       <guid>https://zerotocode.org/milestones/introduction-to-html/</guid>
-      <description>Introduction to html bruh.
-Part 1: Tags and Elements HTML is a markup language.</description>
+      <description>In this milestone, we&amp;rsquo;ll get acquainted with HTML and CSS, two of the key building blocks of every website. Using what we learn, we&amp;rsquo;ll build a very simple About page for you.
+Part 1: HTML Tags and Elements HTML is what we call a markup language. It &amp;ldquo;marks up&amp;rdquo; text with additional meaning, like &amp;ldquo;this bit of text is a heading&amp;rdquo; or &amp;ldquo;this part of the text should be italicized.</description>
     </item>
     
     <item>

@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="https://codeframe-ysjkafyqxf.now.sh/static/css/main.css"/>
 <link rel="stylesheet" href="/css/theme.css"/>
 
-<title>Introduction to HTML | Zero to Code</title>
+<title>About page: Intro to HTML &amp; CSS | Zero to Code</title>
 <link rel="canonical" href="https://zerotocode.org/milestones/introduction-to-html/">
 
 
@@ -41,15 +41,85 @@
 <main aria-role="main">
     <section class="hero">
         <div class="overlay">
-        <h1>Introduction to HTML</h1>
+        <h1>About page: Intro to HTML &amp; CSS</h1>
         <article>
             
 
-<p>Introduction to <strong>html</strong> bruh.</p>
+<p>In this milestone, we&rsquo;ll get acquainted with HTML and CSS, two of the key building blocks of every website. Using what we learn, we&rsquo;ll build a very simple About page for you.</p>
 
-<h2 id="part-1-tags-and-elements">Part 1: Tags and Elements</h2>
+<!-- embed finished sample here -->
 
-<p>HTML is a <em>markup language</em>.</p>
+<h2 id="part-1-html-tags-and-elements">Part 1: HTML Tags and Elements</h2>
+
+<p>HTML is what we call a <em>markup language</em>. It &ldquo;marks up&rdquo; text with additional meaning, like &ldquo;this bit of text is a heading&rdquo; or &ldquo;this part of the text should be italicized.&rdquo; We can also use HTML to add non-text elements like images, videos, and links to our pages as well as interactive things like inputs and buttons. For tooday, let&rsquo;s start with simple text.</p>
+
+<h3 id="everything-is-a-tag">Everything is a tag</h3>
+
+<p>Here&rsquo;s what a tag looks like in HTML.</p>
+
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;p&gt;Hello, everyone!&lt;/p&gt;</code></pre></div>
+
+<p>This bit of code defines a <strong>paragraph</strong>, using the <code>&lt;p&gt;...&lt;/p&gt;</code> tag, which stands for a paragraph. Inside the paragraph, we have the text we want to be included in the paragraph. Let&rsquo;s take note of a few things.</p>
+
+<ul>
+<li>The tag comes in a pair, an <strong>opening tag</strong> <code>&lt;p&gt;</code>, and a <strong>closing tag</strong> <code>&lt;/p&gt;</code>. The pair of opening and closing tags tells us where the paragraph begins an ends, and everything in between is <em>inside</em> the tag.</li>
+<li>The opening tag is a symbol for paragraph, surrounded by angle brackets <code>&lt; &gt;</code>. All tags look this way; the tag for the first-level heading, for example, is <code>&lt;h1&gt;...&lt;/h1&gt;</code>.</li>
+<li>The closing tag looks very similar, but has a forward-slash <code>/</code> before the symbol for the tag. This forward slash closes the tag. If you forget the slash, your code may break &ndash; if something seems off, check if you&rsquo;ve closed your tags with <code>/</code> properly.</li>
+</ul>
+
+<p>Another thing to remember about HTML is that it treats all blank spaces the same. If we wrote, for example, this&hellip;</p>
+
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;p&gt;
+    Hello,
+
+        everyone!
+&lt;/p&gt;</code></pre></div>
+
+<p>&hellip; this output the same result as the first example, because the large empty space in the middle gets smooshed into a single space in HTML.</p>
+
+<p>Here&rsquo;s HTML for a heading, followed by two paragraphs.</p>
+
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;h1&gt;Harry Potter&lt;/h1&gt;
+&lt;p&gt;... and the Philosopher&#39;s Stone&lt;/p&gt;
+&lt;p&gt;by J. K. Rowling&lt;/p&gt;</code></pre></td></tr></table>
+</div>
+</div>
+
+<p>There&rsquo;s three tags here, including the <code>&lt;h1&gt;</code> tag for a header. All three have closing tags, like they should. You&rsquo;ll also notice the line numbers in front of the sample code &ndash; from here on, I&rsquo;ll label each line of code with the line number, so we can refer to them easier. When you&rsquo;re copying these samples, you should omit them.</p>
+
+<h3 id="tags-can-be-inside-other-tags">Tags can be inside other tags</h3>
+
+<p>HTML tags can be nested inside other tags to give additional structure to our text. If we wanted to have a bold bit of text inside a paragraph, for example, we can write</p>
+
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;p&gt;
+    Harry Potter was the &lt;strong&gt;chosen one&lt;/strong&gt;.
+&lt;/p&gt;</code></pre></td></tr></table>
+</div>
+</div>
+
+<p>Here, we have a paragraph (<code>&lt;p&gt;</code>), that contains a <code>&lt;strong&gt;</code> tag. The strong tag defines a bit of text that should be bolded on the page.</p>
+
+<h3 id="tags-with-attributes">Tags with attributes</h3>
+
+<p>Sometimes, when we use an HTML tag, we also want to add some additional data about the tag. For example, when we mark up a bit of text saying &ldquo;this is a link,&rdquo; we&rsquo;d want to define what the link leads to. We can add additional information like this to tags with <strong>attributes</strong>.</p>
+
+<h2 id="part-2-adding-some-color-with-css">Part 2: Adding some color with CSS</h2>
+
+<h2 id="part-3-more-styles-with-css">Part 3: More styles with CSS</h2>
 
         </article>
         </div>
