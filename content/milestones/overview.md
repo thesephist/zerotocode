@@ -13,4 +13,3 @@ HTML, CSS, and JavaScript are the three key pieces of technology that drives web
 ## Using Codeframe
 
 Codeframe is the code editor we use.
-

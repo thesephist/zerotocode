@@ -1,6 +1,8 @@
 body {
     --cf-accent: #4e28bf;
     --cf-background: #d4d2f5;
+
+    --cf-serif: 'Playfair Display', 'Georgia', serif;
 }
 
 header {
@@ -44,7 +46,7 @@ h1,
 h2,
 h3,
 q {
-    font-family: 'Playfair Display', 'Georgia', serif;
+    font-family: var(--cf-serif);
     font-weight: bold;
 }
 
@@ -236,12 +238,35 @@ section p {
     width: 100%;
 }
 
+/* SINGLE PAGE */
+
+article img {
+    max-width: calc(100% - 8px);
+    max-height: 360px;
+    border-radius: 3px;
+    border: 3px solid var(--cf-black);
+    filter: grayscale(50%);
+    box-shadow:
+        6px 6px 0 -3px #555,
+        6px 6px 0 0 var(--cf-black);
+}
+
+blockquote {
+    margin: 0;
+    font-size: 1.4em;
+    font-family: var(--cf-serif);
+    color: var(--cf-accent);
+    padding-left: 24px;
+    box-sizing: border-box;
+}
+
 /* FOOTER */
 
 footer {
     text-align: right;
     margin: 50px 0;
     line-height: 1.5em;
+    font-family: var(--cf-serif);
 }
 
 footer a {
@@ -272,5 +297,3 @@ footer a:hover {
         width: 8px;
     }
 }
-
-

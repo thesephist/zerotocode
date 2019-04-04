@@ -20,6 +20,7 @@
     <section>
         <div class="overlay">
             <h2>A free-forever course about making stuff on the web</h2>
+
             <p>There's no shortage of web design and development courses on the Internet, but not many of them are reliably high quality, and even less focus on the ever-more-important intersection of design, code, and creativity. Zero to Code is my way of trying to share a little bit of the magic behind making stuff on the web, from <strong>simple websites to games, apps, blogs, and more</strong>. It's completely free, and will be forever.</p>
 
             <p>When I set out to make another coding course on the web, I wanted to make sure this was something special. Zero to Code is borne from three things I believe about learning to code.</p>
@@ -29,7 +30,7 @@
 
             <h3>Learning to code should have no barriers to entry.</h3>
             <p>There's no reason why money, age, or where you live should hae any say in whether you can enjoy learning to code. If you have access to the Internet, you should be able to learn to code. Pretty simple.</p>
-            
+
             <h3>Code is about people.</h3>
             <p>Code is a tool to help us build new things, and we build new things best as groups of people, working together. Software is one of the most collaborative disciplines of engineering in the world, and we should never forget that in learning to code. Zero to Code is built to be more than an archive of resources; there are people behind it, and we're here to help.</p>
 
@@ -41,7 +42,9 @@
     <section>
         <div class="overlay">
             <h2>A series of milestones</h2>
+
             <p>Zero to Code's course is put together a little differently than most. Rather than having multiple courses that are broken down into lessons, there's just one course, broken down into milestones, in increasing order of complexity. Each milestone is a mix of 2-5 mini-lessons around new topics, and a small project that you can build to get acquainted and show off new things you're learning.</p>
+
             <p>Each milestone is designed to be digestible in a single day, though it may take a few more to get comfortable using it in practice. Here are the first few milestone projects.</p>
         </div>
         <div class="carousel">
@@ -67,26 +70,19 @@
     <section>
         <div class="overlay">
             <h2>The tools make all the difference</h2>
+
             <p>When we first get into learning any new skill, it's easy to be overwhelmed into tooling fatigue. This feels especially true in programming, where there are new trends and tools out every month that captures the chatter of the industry.</p>
+
             <p>But we don't need any of those tools to start.</p>
-            <p>Most of Zero to Code's materials and projects are built around <a href="https://codeframe.co" target="_blank">Codeframe</a>, a simple, lightweight, online code editor I specifically designed for people learning to code. This editor makes a lot of ZTC possible, from examples and demos to free exercises and instantly sharable project starter templates. There's zero setup and zero configuration to start -- just open up a browser window, and start coding.</p>
+
+            <p>Most of Zero to Code's materials and projects are built around <a href="https://codeframe.co" target="_blank">Codeframe</a>, a simple, fast, lightweight online code editor I specifically designed and built for people learning to code. This editor makes a lot of ZTC possible, from examples and demos to free exercises and instantly sharable project starter templates. There's zero setup and zero configuration to start -- just open up a browser window, and start coding.</p>
+
             <div class="liveEditorContainer fixed button">
                 <!-- Update this later to be a simple but intuitive demo of Codeframe -->
-                <iframe src="{{ .Params.codeframeURL }}/h/ea9b2d072562/j/e3b0c44298fc/edit?from=trial" frameborder="0" class="liveEditor"></iframe>
+                <iframe src="{{ .Params.codeframeURL }}/h/ea9b2d072562/j/e3b0c44298fc/edit?from=ztc_index" frameborder="0" class="liveEditor"></iframe>
             </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="overlay">
-            <h2>Course outline</h2>
-            <p>Here are the major milestones I've made so far.</p>
-            {{ range first 10 .Pages }}
-            {{ .Render "summary"}}
-            {{ end }}
         </div>
     </section>
 </main>
 
 {{ end }}
-

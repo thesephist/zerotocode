@@ -5,7 +5,9 @@
         <div class="overlay">
             <h1>{{ .Title }}</h1>
             <div class="tagline serif">{{ .Params.Tagline }}</div>
-            <p>{{ .Content }}</p>
+            <article>
+                {{ .Content }}
+            </article>
         </div>
     </section>
 
@@ -22,4 +24,3 @@
 </main>
 
 {{ end }}
-
