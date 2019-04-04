@@ -2,3 +2,5 @@ baseURL = "https://zerotocode.org/"
 languageCode = "en-us"
 title = "Zero to Code"
 
+pygmentsStyle="vs"
+pygmentsOptions="linenos=1"

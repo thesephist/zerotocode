@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="https://codeframe-ysjkafyqxf.now.sh/static/css/main.css"/>
 <link rel="stylesheet" href="/css/theme.css"/>
 
-<title>Overview | Zero to Code</title>
+<title>Overview and Orientation | Zero to Code</title>
 <link rel="canonical" href="https://zerotocode.org/milestones/overview/">
 
 
@@ -41,19 +41,104 @@
 <main aria-role="main">
     <section class="hero">
         <div class="overlay">
-        <h1>Overview</h1>
+        <h1>Overview and Orientation</h1>
         <article>
             
 
-<p>Overview of Zero to Code</p>
+<p>Before you begin working through the milestones, this overview covers a few things you should know to move through the course, including what you&rsquo;ll learn, how to use our code editor, Codeframe, and how to learn to code effectively using the resources available online, in addition to what&rsquo;s here already.</p>
 
-<h2 id="html-css-and-javascript">HTML, CSS, and JavaScript</h2>
+<h2 id="what-we-ll-learn">What we&rsquo;ll learn</h2>
 
-<p>HTML, CSS, and JavaScript are the three key pieces of technology that drives websites.</p>
+<p>Zero to Code is a course about making interesting, useful things on the web using technologies that are core to any website: <strong>HTML, CSS, and JavaScript</strong>. We&rsquo;ll work through a series of small projects in increasing complexity to get you more and more familiar with concepts in these languages, and how to combine them to build beautiful, useful websites.</p>
 
-<h2 id="using-codeframe">Using Codeframe</h2>
+<h3 id="things-we-ll-cover">Things we&rsquo;ll cover</h3>
 
-<p>Codeframe is the code editor we use.</p>
+<p>You&rsquo;ll get a solid understanding of&hellip;</p>
+
+<ul>
+<li>How to use HTML, CSS, and modern JavaScript to build webpages</li>
+<li>Basic of good design on the web, from typography to color and layout to animation and interaction design</li>
+<li>How to create and code responsive design that work across different screen sizes</li>
+<li>How to think about accessibility, so as many people as possible can use what you make</li>
+<li>How to break down a design or wireframe to go from sketch to code</li>
+<li>How to share the websites you build under your own domain name on the Internet, so evryone can access it.</li>
+<li>Where to go and what to learn after Zero to Code, if you want to continue learning</li>
+</ul>
+
+<p>In short, think about it this way: you&rsquo;ll walk out of the course with a rockin&rsquo; personal webpage.</p>
+
+<h3 id="things-we-won-t-cover-in-depth-yet">Things we won&rsquo;t cover in depth (yet)</h3>
+
+<p>There are some topics that are important or interesting, but for which I think there are other high-quality tutorial or courses available online, or for which I don&rsquo;t currently have time to built curriculum, so we don&rsquo;t cover yet. These are&hellip;</p>
+
+<ul>
+<li>How to build dynamic web apps and services that require login, user accounts, profiles, and APIs</li>
+<li>Search engine optimization (SEO)</li>
+<li>Content management systems like Wordpress</li>
+<li>JavaScript frameworks like React, Angular, Vue, Svelte, and Polymer (though we&rsquo;ll briefly discuss the merits of frameworks)</li>
+<li>JavaScript libraries like Underscore, Lodash, and jQuery</li>
+<li>Modern JavaScript development tools like Webpack, Babel, Next.js</li>
+<li>Other languages or environments used for the web like Node.js, PHP, Python, Ruby on Rails&hellip;</li>
+</ul>
+
+<p>If you&rsquo;re interested in learning about any of these topics, the aren&rsquo;t out of the question! Drop me a line at <a href="https://twitter.com/thesephist">@thesephist</a> or reach out from the about page.</p>
+
+<h2 id="using-codeframe-our-code-editor">Using Codeframe, our code editor</h2>
+
+<p><a href="https://codeframe.co">Codeframe</a> is the code editor we&rsquo;ll use through most of this course to build projects and experiment with new concepts. It looks like this.</p>
+
+<p>You can edit the HTML, CSS (inside the <code>&lt;style&gt;</code> block), and JavaScript code on the right/bottom pane, and see the result on the left/top pane as you type. If you want to save or share what you&rsquo;ve made, you can hit the <span class="fixed inline button">Save &amp; Reload</span> button to save your work, which will give you a link and a preview button you can use to share what you&rsquo;ve made with anyone else on the planet, just by sharing that link!</p>
+
+<div class="liveEditorContainer fixed button">
+    <!-- Update this later to be a simple but intuitive demo of Codeframe -->
+    <iframe src="https://codeframe.co/new?from=ztc_about" frameborder="0" class="liveEditor"></iframe>
+</div>
+
+<p>For a gentle introduction to Codeframe, let&rsquo;s some HTML! Make sure the <span class="fixed inline active button">HTML</span> mode is selected (it is by default), and type this snippet of HTML code into the editor pane, replacing <code>[your name]</code> with your name:</p>
+
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;h1&gt;Hi Codeframe!&lt;/h1&gt;
+&lt;p&gt;My name is &lt;strong&gt;[your name]&lt;/strong&gt;.&lt;/p&gt;
+&lt;button&gt;Click Me!&lt;/button&gt;</code></pre></div>
+
+<p>As you type, you should see something appear on the preview pane. What do you see?</p>
+
+<p>You should see three things:</p>
+
+<ul>
+<li>A big, bold header that says <strong>Hi Codeframe!</strong></li>
+<li>A smaller bit of text that corresponds to what you typed in between the <code>&lt;p&gt;...&lt;/p&gt;</code></li>
+<li>A small button</li>
+</ul>
+
+<p>This is HTML! Try hitting <span class="inline fixed button">Save &amp; Reload</span>, and tap the preview button to see the webpage you just made open in a separate tab. To share what you just wrote with anyone, you can open it in a new tab and copy the link, like we just did here, or you can copy the link in the URL bar in the preview pane of the editor itself (they&rsquo;re the same link).</p>
+
+<p>After you save your work, you can always come back to the <em>same version of the file</em> with the URL. If you copy the URL to the editor itself, you can come back and continue to edit the code you&rsquo;ve been editing.</p>
+
+<p>This is Codeframe! Experiment with the HTML code in the editor, and see if the preview behaves the way you expect it to. We&rsquo;ll explore HTML in depth in the first milestone project.</p>
+
+<h2 id="some-tips-on-learning-to-code">Some tips on learning to code</h2>
+
+<p>Like learning anything new, learning to code requires a bit of a mindset shift. Here are some tips I&rsquo;ve found useful in learning to code without getting to frustrated or bored, and to get the most out of the materials I have.</p>
+
+<ul>
+<li>At first, it might feel like there&rsquo;s a lot to memorize. You don&rsquo;t have to memorize most things you come across (I&rsquo;ll tell you when you need to remember something specific). Google is your friend, and the key is to remember <em>that there&rsquo;s a way to do something</em>, not necessary to remember <em>exactly</em> how to do it. As you practice and create more and more, you&rsquo;ll learn these shortcuts and keywords by heart.</li>
+<li>Whenever you&rsquo;re copying some sample code into the editor, if it&rsquo;s not too much, try typing it out by hand instead of copy-pasting it. This will help us get it in our fingers faster, and make us think more consciously about what we&rsquo;re writing.</li>
+<li>Add more tips here&hellip;</li>
+</ul>
+
+<h2 id="resources-elsewhere-on-the-web">Resources elsewhere on the web</h2>
+
+<p>There&rsquo;s so many resources online that&rsquo;ll be helpful for you as you learn web design and development. Here are a few of my favorites that I&rsquo;d recommend you find, if you&rsquo;re ever stuck or want some inspiration.</p>
+
+<h3 id="mdn-formerly-mozilla-developer-network">MDN (formerly Mozilla Developer Network)</h3>
+
+<p>MDN is the <em>de facto</em> documentation site for HTML, CSS, and JavaScript. It can be too technical for a beginner, but anytime you have a specific question about a specific way to do something, MDN can usually help you find the right answer.</p>
+
+<h3 id="stack-overflow">Stack Overflow</h3>
+
+<h3 id="css-tricks">CSS-Tricks</h3>
+
+<h3 id="dribbble">Dribbble</h3>
 
         </article>
         </div>

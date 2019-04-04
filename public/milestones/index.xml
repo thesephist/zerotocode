@@ -31,14 +31,13 @@ Part 1: Tags and Elements HTML is a markup language.</description>
     </item>
     
     <item>
-      <title>Overview</title>
+      <title>Overview and Orientation</title>
       <link>https://zerotocode.org/milestones/overview/</link>
       <pubDate>Wed, 03 Apr 2019 09:11:18 -0700</pubDate>
       
       <guid>https://zerotocode.org/milestones/overview/</guid>
-      <description>Overview of Zero to Code
-HTML, CSS, and JavaScript HTML, CSS, and JavaScript are the three key pieces of technology that drives websites.
-Using Codeframe Codeframe is the code editor we use.</description>
+      <description>Before you begin working through the milestones, this overview covers a few things you should know to move through the course, including what you&amp;rsquo;ll learn, how to use our code editor, Codeframe, and how to learn to code effectively using the resources available online, in addition to what&amp;rsquo;s here already.
+What we&amp;rsquo;ll learn Zero to Code is a course about making interesting, useful things on the web using technologies that are core to any website: HTML, CSS, and JavaScript.</description>
     </item>
     
   </channel>

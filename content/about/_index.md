@@ -37,7 +37,7 @@ I think this makes the web a unique place to start learning to code, and when I 
 To me, the most important button in the Codeframe editor is this one.
 
 <p>
-    <div class="fixed inline button">Preview</div>
+    <button class="button">Preview</button>
 </p>
 
 Codeframe is built from the ground up around **instant feedback** -- you see the output of your code, live, as you type. But **once you have something interesting, or creative, or useful, you should be able to share it with anyone else**. I think this is the most important step in learning to code, getting other people's feedback and iterating on ideas to make something useful or interesting. So Zero to Code's projects are all designed to be more than just reviews -- they're useful mini-projects that you can customize and share with other people. I really think that's key, and I hope this instant shareability built into the course inspires more people to keep coding.
