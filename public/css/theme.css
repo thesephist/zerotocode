@@ -246,10 +246,13 @@ article img,
     max-height: 360px;
     border-radius: 4px;
     border: 3px solid var(--cf-black);
-    filter: grayscale(50%);
     box-shadow:
         6px 6px 0 -3px #555,
         6px 6px 0 0 var(--cf-black);
+}
+
+article img {
+    filter: grayscale(50%);
 }
 
 blockquote {
