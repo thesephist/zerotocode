@@ -290,7 +290,7 @@ Classes are very powerful. We can have multiple classes, and we can apply classe
     /* I'll use comments to explain what's going on here */
 
     /* We can separate selectors with commas to select
-        multiple things in one fell swoop */
+        multiple things in one block of CSS rules */
     h1, h2 {
         color: blue;
         /* This underlines text */
@@ -327,7 +327,7 @@ Classes are very powerful. We can have multiple classes, and we can apply classe
 <p>He is also on Twitter, at @thesephist.</p>
 {{</highlight>}}
 
-CSS gives us a _huge_ amoutn of freedom as web designers and developers to express our creativity on the canvas of the web, and once you get a grasp of the basics from above, you can create lots of interesting designs.
+CSS gives us a _huge_ amount of freedom as web designers and developers to express our creativity on the canvas of the web, and once you get a grasp of the basics from above, you can create lots of interesting designs.
 
 We'll explore more and more CSS properties as we move forward, so there's no need to learn every property now. For this milestone, take the last sample above, copy-paste it into a Codeframe, and try these changes:
 
@@ -340,3 +340,141 @@ We'll explore more and more CSS properties as we move forward, so there's no nee
 Once you've explored CSS a bit here, we're ready to dive into our first milestone project! Let's build you an about-you page, completely from scratch, that you can put on the web.
 
 ## Part 3: About page - Putting it all together
+
+We'll go about building your about page in two main steps, first writing the HTML, then adding some CSS.
+
+### The HTML
+
+Your about page can include virtually anything you like, but should at least include...
+
+- A first-level header (`<h1>`) at the top of the page, that says "About [your name]"
+- An image, which will be your profile picture
+- A tweet-sized, 1-2 sentence bio about you
+- A couple of subsections, each section under an `<h2>` (since they're under the big main `<h1>` section). What are you interested in? What are you working on? What music or films do you like?
+
+Remember that the tag we use to include an image is `<img>`. The image tag also needs an `href` attribute, which should be set equal to a link to the image.
+
+#### A brief primer on making a list
+
+One new element that may be useful, if you're making a list of activites, films, songs, or places, is the HTML tag for making lists, `<ul>`. Let's see how this works.
+
+{{<highlight html>}}
+<p>My travel bucket list:</p>
+<ul>
+    <li>Isle of Skye</li>
+    <li>Polynesia</li>
+    <li>Tel Aviv</li>
+    <li>Monaco</li>
+    <li>Santorini</li>
+</ul>
+{{</highlight>}}
+
+A list in HTML is actually made up of two different tags: the `<ul>` tag, which stands for "unordered list", and the `<li>` tag, which stands for "list item". Why "unordered", you ask? Well, an unordered list will produce a bulleted list. There's also the `<ol>`, which is an "ordered list". Let's see how that looks...
+
+{{<highlight html "hl_lines=2 8">}}
+<p>My travel bucket list:</p>
+<ol>
+    <li>Isle of Skye</li>
+    <li>Polynesia</li>
+    <li>Tel Aviv</li>
+    <li>Monaco</li>
+    <li>Santorini</li>
+</ol>
+{{</highlight>}}
+
+An `<ol>` produces a list with numbers as labels, instead of bullets.
+
+### Adding styles with CSS
+
+Now that you have some content for your about page, let's make it look a bit prettier.
+
+One change that you might be itching to make is to change the font on your page to something less reminiscent of a school report. We can control styles on the entire page by selecting the entire "body" of the page, like this:
+
+{{<highlight html>}}
+<style>
+    body {
+        /* sans-serif refers to a style of font */
+        font-family: sans-serif;
+    }
+</style>
+{{</highlight>}}
+
+What's `sans-serif`? "Serif" and "sans-serif" are two styles of fonts, or font families. You can read more about their difference [here](https://about.easil.com/support/serif-vs-sans-serif/), but this should give your text a bit of a modern facelift.
+
+If you included an image, you may also find that the image is too big or too small. You can adjust the size of the image by setting the `width` and/or the `height` CSS properties on the image tag, like this.
+
+{{<highlight css>}}
+img {
+    height: 300px;
+    /* or */
+    width: 300px;
+}
+{{</highlight>}}
+
+If you set _both_ width and height, you may find that it distorts the image's aspect ratio.
+
+From here, you can add and apply styles to your HTML page to make it look the way you want. Here's some CSS properties you might find useful as you explore ways to style your about page.
+
+#### Adding borders around things
+
+Here's an example of a paragraph with a border around it:
+
+<p style="border: 5px solid purple">
+    I've got a border around me!
+</p>
+
+This border was added with this CSS:
+
+{{<highlight css>}}
+p.purple-border {
+    border-width: 5px;
+    border-style: solid;
+    border-color: purple;
+}
+
+/* We can also write this in shorthand, like this */
+p.purple-border {
+    border: 5px solid purple;
+}
+{{</highlight>}}
+
+Experiment with different values for border thickness (`border-width`), color, and style (you can pick between `dotted`, `dashed`, and `solid`) to see what you like.
+
+#### Padding inside borders and backgrounds
+
+If you care about aesthetics, you might have felt that the bordered paragraph above feels a little off -- there's no margin between the paragraph and the border, so it all feels a little cramped. We can fix that by adding some `padding` to the paragraph.
+
+As we'll learn more about later, in CSS, `padding` represents the space between what's inside the tag, and the border.
+
+Let's set padding to `8px` in this case:
+
+{{<highlight css "hl_lines=3">}}
+p.purple-border {
+    border: 5px solid purple;
+    padding: 8px;
+}
+{{</highlight>}}
+
+This will add 8 pixels of breathing room around our paragraph, like this:
+
+<p style="border: 5px solid purple; padding: 8px;">
+    I've got a border around me!
+</p>
+
+#### Curved corners with `border-radius`
+
+Another neat trick is to add some curved corners around our boxes, like this:
+
+<p style="border: 5px solid purple; padding: 8px; border-radius: 10px">
+    I've got a border around me!
+</p>
+
+We can add curves to borders using the `border-radius` property, which looks like this:
+
+{{<highlight css "hl_lines=4">}}
+p.purple-border {
+    border: 5px solid purple;
+    padding: 8px;
+    border-radius: 10px;
+}
+{{</highlight>}}

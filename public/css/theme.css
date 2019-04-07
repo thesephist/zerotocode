@@ -299,6 +299,10 @@ ul li::before {
     font-family: 'Menlo', 'Monaco', monospace;
 }
 
+h1 > code,
+h2 > code,
+h3 > code,
+h4 > code,
 p > code,
 li > code {
     font-family: 'Menlo', 'Monaco', monospace;

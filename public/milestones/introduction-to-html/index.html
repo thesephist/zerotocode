@@ -520,7 +520,7 @@
     <span style="color:#aaa;font-style:italic">/* I&#39;ll use comments to explain what&#39;s going on here */</span>
 
     <span style="color:#aaa;font-style:italic">/* We can separate selectors with commas to select
-</span><span style="color:#aaa;font-style:italic">        multiple things in one fell swoop */</span>
+</span><span style="color:#aaa;font-style:italic">        multiple things in one block of CSS rules */</span>
     <span style="color:#1e90ff;font-weight:bold">h1</span>, <span style="color:#1e90ff;font-weight:bold">h2</span> {
         <span style="color:#00a">color</span>: <span style="color:#00a">blue</span>;
         <span style="color:#aaa;font-style:italic">/* This underlines text */</span>
@@ -558,7 +558,7 @@
 </div>
 </div>
 
-<p>CSS gives us a <em>huge</em> amoutn of freedom as web designers and developers to express our creativity on the canvas of the web, and once you get a grasp of the basics from above, you can create lots of interesting designs.</p>
+<p>CSS gives us a <em>huge</em> amount of freedom as web designers and developers to express our creativity on the canvas of the web, and once you get a grasp of the basics from above, you can create lots of interesting designs.</p>
 
 <p>We&rsquo;ll explore more and more CSS properties as we move forward, so there&rsquo;s no need to learn every property now. For this milestone, take the last sample above, copy-paste it into a Codeframe, and try these changes:</p>
 
@@ -576,6 +576,220 @@
 <p>Once you&rsquo;ve explored CSS a bit here, we&rsquo;re ready to dive into our first milestone project! Let&rsquo;s build you an about-you page, completely from scratch, that you can put on the web.</p>
 
 <h2 id="part-3-about-page-putting-it-all-together">Part 3: About page - Putting it all together</h2>
+
+<p>We&rsquo;ll go about building your about page in two main steps, first writing the HTML, then adding some CSS.</p>
+
+<h3 id="the-html">The HTML</h3>
+
+<p>Your about page can include virtually anything you like, but should at least include&hellip;</p>
+
+<ul>
+<li>A first-level header (<code>&lt;h1&gt;</code>) at the top of the page, that says &ldquo;About [your name]&rdquo;</li>
+<li>An image, which will be your profile picture</li>
+<li>A tweet-sized, 1-2 sentence bio about you</li>
+<li>A couple of subsections, each section under an <code>&lt;h2&gt;</code> (since they&rsquo;re under the big main <code>&lt;h1&gt;</code> section). What are you interested in? What are you working on? What music or films do you like?</li>
+</ul>
+
+<p>Remember that the tag we use to include an image is <code>&lt;img&gt;</code>. The image tag also needs an <code>href</code> attribute, which should be set equal to a link to the image.</p>
+
+<h4 id="a-brief-primer-on-making-a-list">A brief primer on making a list</h4>
+
+<p>One new element that may be useful, if you&rsquo;re making a list of activites, films, songs, or places, is the HTML tag for making lists, <code>&lt;ul&gt;</code>. Let&rsquo;s see how this works.</p>
+
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#1e90ff;font-weight:bold">p</span>&gt;My travel bucket list:&lt;/<span style="color:#1e90ff;font-weight:bold">p</span>&gt;
+&lt;<span style="color:#1e90ff;font-weight:bold">ul</span>&gt;
+    &lt;<span style="color:#1e90ff;font-weight:bold">li</span>&gt;Isle of Skye&lt;/<span style="color:#1e90ff;font-weight:bold">li</span>&gt;
+    &lt;<span style="color:#1e90ff;font-weight:bold">li</span>&gt;Polynesia&lt;/<span style="color:#1e90ff;font-weight:bold">li</span>&gt;
+    &lt;<span style="color:#1e90ff;font-weight:bold">li</span>&gt;Tel Aviv&lt;/<span style="color:#1e90ff;font-weight:bold">li</span>&gt;
+    &lt;<span style="color:#1e90ff;font-weight:bold">li</span>&gt;Monaco&lt;/<span style="color:#1e90ff;font-weight:bold">li</span>&gt;
+    &lt;<span style="color:#1e90ff;font-weight:bold">li</span>&gt;Santorini&lt;/<span style="color:#1e90ff;font-weight:bold">li</span>&gt;
+&lt;/<span style="color:#1e90ff;font-weight:bold">ul</span>&gt;</code></pre></td></tr></table>
+</div>
+</div>
+
+<p>A list in HTML is actually made up of two different tags: the <code>&lt;ul&gt;</code> tag, which stands for &ldquo;unordered list&rdquo;, and the <code>&lt;li&gt;</code> tag, which stands for &ldquo;list item&rdquo;. Why &ldquo;unordered&rdquo;, you ask? Well, an unordered list will produce a bulleted list. There&rsquo;s also the <code>&lt;ol&gt;</code>, which is an &ldquo;ordered list&rdquo;. Let&rsquo;s see how that looks&hellip;</p>
+
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="display:block;width:100%;background-color:#e5e5e5"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="display:block;width:100%;background-color:#e5e5e5"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#1e90ff;font-weight:bold">p</span>&gt;My travel bucket list:&lt;/<span style="color:#1e90ff;font-weight:bold">p</span>&gt;
+<span style="display:block;width:100%;background-color:#e5e5e5">&lt;<span style="color:#1e90ff;font-weight:bold">ol</span>&gt;
+</span>    &lt;<span style="color:#1e90ff;font-weight:bold">li</span>&gt;Isle of Skye&lt;/<span style="color:#1e90ff;font-weight:bold">li</span>&gt;
+    &lt;<span style="color:#1e90ff;font-weight:bold">li</span>&gt;Polynesia&lt;/<span style="color:#1e90ff;font-weight:bold">li</span>&gt;
+    &lt;<span style="color:#1e90ff;font-weight:bold">li</span>&gt;Tel Aviv&lt;/<span style="color:#1e90ff;font-weight:bold">li</span>&gt;
+    &lt;<span style="color:#1e90ff;font-weight:bold">li</span>&gt;Monaco&lt;/<span style="color:#1e90ff;font-weight:bold">li</span>&gt;
+    &lt;<span style="color:#1e90ff;font-weight:bold">li</span>&gt;Santorini&lt;/<span style="color:#1e90ff;font-weight:bold">li</span>&gt;
+<span style="display:block;width:100%;background-color:#e5e5e5">&lt;/<span style="color:#1e90ff;font-weight:bold">ol</span>&gt;</span></code></pre></td></tr></table>
+</div>
+</div>
+
+<p>An <code>&lt;ol&gt;</code> produces a list with numbers as labels, instead of bullets.</p>
+
+<h3 id="adding-styles-with-css">Adding styles with CSS</h3>
+
+<p>Now that you have some content for your about page, let&rsquo;s make it look a bit prettier.</p>
+
+<p>One change that you might be itching to make is to change the font on your page to something less reminiscent of a school report. We can control styles on the entire page by selecting the entire &ldquo;body&rdquo; of the page, like this:</p>
+
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#1e90ff;font-weight:bold">style</span>&gt;
+    <span style="color:#1e90ff;font-weight:bold">body</span> {
+        <span style="color:#aaa;font-style:italic">/* sans-serif refers to a style of font */</span>
+        <span style="color:#00a">font-family</span>: <span style="color:#00a">sans-serif</span>;
+    }
+&lt;/<span style="color:#1e90ff;font-weight:bold">style</span>&gt;</code></pre></td></tr></table>
+</div>
+</div>
+
+<p>What&rsquo;s <code>sans-serif</code>? &ldquo;Serif&rdquo; and &ldquo;sans-serif&rdquo; are two styles of fonts, or font families. You can read more about their difference <a href="https://about.easil.com/support/serif-vs-sans-serif/">here</a>, but this should give your text a bit of a modern facelift.</p>
+
+<p>If you included an image, you may also find that the image is too big or too small. You can adjust the size of the image by setting the <code>width</code> and/or the <code>height</code> CSS properties on the image tag, like this.</p>
+
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#1e90ff;font-weight:bold">img</span> {
+    <span style="color:#00a">height</span>: <span style="color:#099">300</span><span style="color:#0aa">px</span>;
+    <span style="color:#aaa;font-style:italic">/* or */</span>
+    <span style="color:#00a">width</span>: <span style="color:#099">300</span><span style="color:#0aa">px</span>;
+}</code></pre></td></tr></table>
+</div>
+</div>
+
+<p>If you set <em>both</em> width and height, you may find that it distorts the image&rsquo;s aspect ratio.</p>
+
+<p>From here, you can add and apply styles to your HTML page to make it look the way you want. Here&rsquo;s some CSS properties you might find useful as you explore ways to style your about page.</p>
+
+<h4 id="adding-borders-around-things">Adding borders around things</h4>
+
+<p>Here&rsquo;s an example of a paragraph with a border around it:</p>
+
+<p style="border: 5px solid purple">
+    I've got a border around me!
+</p>
+
+<p>This border was added with this CSS:</p>
+
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#1e90ff;font-weight:bold">p</span>.<span style="color:#0a0;text-decoration:underline">purple-border</span> {
+    <span style="color:#00a">border-width</span>: <span style="color:#099">5</span><span style="color:#0aa">px</span>;
+    <span style="color:#00a">border-style</span>: <span style="color:#00a">solid</span>;
+    <span style="color:#00a">border-color</span>: <span style="color:#00a">purple</span>;
+}
+
+<span style="color:#aaa;font-style:italic">/* We can also write this in shorthand, like this */</span>
+<span style="color:#1e90ff;font-weight:bold">p</span>.<span style="color:#0a0;text-decoration:underline">purple-border</span> {
+    <span style="color:#00a">border</span>: <span style="color:#099">5</span><span style="color:#0aa">px</span> <span style="color:#00a">solid</span> <span style="color:#00a">purple</span>;
+}</code></pre></td></tr></table>
+</div>
+</div>
+
+<p>Experiment with different values for border thickness (<code>border-width</code>), color, and style (you can pick between <code>dotted</code>, <code>dashed</code>, and <code>solid</code>) to see what you like.</p>
+
+<h4 id="padding-inside-borders-and-backgrounds">Padding inside borders and backgrounds</h4>
+
+<p>If you care about aesthetics, you might have felt that the bordered paragraph above feels a little off &ndash; there&rsquo;s no margin between the paragraph and the border, so it all feels a little cramped. We can fix that by adding some <code>padding</code> to the paragraph.</p>
+
+<p>As we&rsquo;ll learn more about later, in CSS, <code>padding</code> represents the space between what&rsquo;s inside the tag, and the border.</p>
+
+<p>Let&rsquo;s set padding to <code>8px</code> in this case:</p>
+
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="display:block;width:100%;background-color:#e5e5e5"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#1e90ff;font-weight:bold">p</span>.<span style="color:#0a0;text-decoration:underline">purple-border</span> {
+    <span style="color:#00a">border</span>: <span style="color:#099">5</span><span style="color:#0aa">px</span> <span style="color:#00a">solid</span> <span style="color:#00a">purple</span>;
+<span style="display:block;width:100%;background-color:#e5e5e5">    <span style="color:#00a">padding</span>: <span style="color:#099">8</span><span style="color:#0aa">px</span>;
+</span>}</code></pre></td></tr></table>
+</div>
+</div>
+
+<p>This will add 8 pixels of breathing room around our paragraph, like this:</p>
+
+<p style="border: 5px solid purple; padding: 8px;">
+    I've got a border around me!
+</p>
+
+<h4 id="curved-corners-with-border-radius">Curved corners with <code>border-radius</code></h4>
+
+<p>Another neat trick is to add some curved corners around our boxes, like this:</p>
+
+<p style="border: 5px solid purple; padding: 8px; border-radius: 10px">
+    I've got a border around me!
+</p>
+
+<p>We can add curves to borders using the <code>border-radius</code> property, which looks like this:</p>
+
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="display:block;width:100%;background-color:#e5e5e5"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#1e90ff;font-weight:bold">p</span>.<span style="color:#0a0;text-decoration:underline">purple-border</span> {
+    <span style="color:#00a">border</span>: <span style="color:#099">5</span><span style="color:#0aa">px</span> <span style="color:#00a">solid</span> <span style="color:#00a">purple</span>;
+    <span style="color:#00a">padding</span>: <span style="color:#099">8</span><span style="color:#0aa">px</span>;
+<span style="display:block;width:100%;background-color:#e5e5e5">    <span style="color:#00a">border-radius</span>: <span style="color:#099">10</span><span style="color:#0aa">px</span>;
+</span>}</code></pre></td></tr></table>
+</div>
+</div>
 
         </article>
         </div>
