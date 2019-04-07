@@ -306,7 +306,7 @@ h4 > code,
 p > code,
 li > code {
     font-family: 'Menlo', 'Monaco', monospace;
-    background: var(--cf-background);
+    background: #eaeaea;
     border-radius: 3px;
     padding: 3px 5px 3px 5px;
     font-size: 1em;
