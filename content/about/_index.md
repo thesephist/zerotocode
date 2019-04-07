@@ -4,11 +4,23 @@ tagline: "How this whole thing started"
 date: 2019-04-03T01:11:34-07:00
 ---
 
-I've wanted to start my own web design and development course for years now. I love teaching, I love making things for the web, and this is a combination I just had to hit at some point.
+## About Me
 
 ![Linus @ Cal Hacks 2018](/img/about-linus.jpg)
 
-## Great courses are hard to come by
+Hi there 👋 I'm Linus. I've been coding since around 2012, and for most of that time, I've been building software for the web, focusing on what we call "frontend" -- that's the bits you see when you interact with anything on the web. The webpages, the buttons, the forms, the animations, the whole deal.
+
+I've wanted to start my own web design and development course for years now. I love teaching, I love making things for the web, and this is a combination I just had to hit at some point.
+
+If you ever want to get in touch, whether about Zero to Code or anything else, you can start a conversation at...
+
+- [@thesephist](https://twitter.com/thesephist) on Twitter
+- [/thesephist](https://www.linkedin.com/in/thesephist/) on LinkedIn
+- [linus.zone/now](https://linus.zone/now), my website, for everything else.
+
+Please reach out if you have any questions, ideas, or feedback! I'd love to hear from you and see what you're making.
+
+## A problem: great courses are hard to come by
 
 Coding for the web was how I began my career as a programmer, and it's still my primary field of expertise in software, as a UI and frontend infrastructure engineer. So over the years lots of friends and family have asked me, "I want to get into learning how to code to build websites. Where should I go?" And I've always come up dry.
 

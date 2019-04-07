@@ -10,7 +10,7 @@ In this milestone, we'll get acquainted with HTML and CSS, two of the key buildi
 
 ## Part 1: HTML Tags and Elements
 
-HTML is what we call a _markup language_. It "marks up" text with additional meaning, like "this bit of text is a heading" or "this part of the text should be italicized." We can also use HTML to add non-text elements like images, videos, and links to our pages as well as interactive things like inputs and buttons. For tooday, let's start with simple text.
+HTML is what we call a _markup language_. It "marks up" text with additional meaning, like "this bit of text is a heading" or "this part of the text should be italicized." We can also use HTML to add non-text elements like images, videos, and links to our pages as well as interactive things like inputs and buttons. For today, let's start with simple text.
 
 ### Everything is a tag
 
@@ -69,7 +69,7 @@ HTML tags can be nested inside other tags to give additional structure to our te
 </p>
 {{</highlight>}}
 
-Here, we have a paragraph (`<p>`), that contains a `<strong>` tag. The strong tag defines a bit of text that should be bolded on the page. We can even nest further
+Here, we have a paragraph (`<p>`), that contains a `<strong>` tag. The strong tag defines a bit of text that should be bold on the page. We can even nest further
 
 {{<highlight html>}}
 <main>
@@ -356,7 +356,7 @@ Remember that the tag we use to include an image is `<img>`. The image tag also 
 
 #### A brief primer on making a list
 
-One new element that may be useful, if you're making a list of activites, films, songs, or places, is the HTML tag for making lists, `<ul>`. Let's see how this works.
+One new element that may be useful, if you're making a list of activities, films, songs, or places, is the HTML tag for making lists, `<ul>`. Let's see how this works.
 
 {{<highlight html>}}
 <p>My travel bucket list:</p>

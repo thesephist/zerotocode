@@ -48,7 +48,7 @@ You can edit the HTML, CSS (inside the `<style>` block), and JavaScript code on 
     <iframe src="https://beta.codeframe.co/new?from=ztc_about" frameborder="0" class="liveEditor"></iframe>
 </div>
 
-For a gentle introduction to Codeframe, let's some HTML! Make sure the <span class="fixed inline active button">HTML</span> mode is selected (it is by default), and type this snippet of HTML code into the editor pane, replacing `[your name]` with your name:
+For a gentle introduction to Codeframe, let's write some HTML! Make sure the <span class="fixed inline active button">HTML</span> mode is selected (it is by default), and type this snippet of HTML code into the editor pane, replacing `[your name]` with your name:
 
 {{<highlight html "linenos=">}}
 <h1>Hi Codeframe!</h1>
@@ -68,7 +68,7 @@ This is HTML! Try hitting <span class="inline fixed button">Save &amp; Reload</s
 
 After you save your work, you can always come back to the _same version of the file_ with the URL. If you copy the URL to the editor itself, you can come back and continue to edit the code you've been editing.
 
-This is Codeframe! Experiment with the HTML code in the editor, and see if the preview behaves the way you expect it to. We'll explore HTML in depth in the first milestone project.
+This is Codeframe! Experiment with the HTML code in the editor, and see if the website you see in the preview behaves the way you expect it to. We'll explore HTML in depth in the first milestone project.
 
 ## Some tips on learning to code
 
