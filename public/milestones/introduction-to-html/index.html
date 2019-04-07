@@ -93,6 +93,23 @@
 
 <p>There&rsquo;s three tags here, including the <code>&lt;h1&gt;</code> tag for a header. All three have closing tags, like they should. You&rsquo;ll also notice the line numbers in front of the sample code &ndash; from here on, I&rsquo;ll label each line of code with the line number, so we can refer to them easier. When you&rsquo;re copying these samples to test them on your own, you should omit them.</p>
 
+<h3 id="html-comments">HTML Comments</h3>
+
+<p>Consider this bit of HTML.</p>
+
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#aaa;font-style:italic">&lt;!-- this is a comment! --&gt;</span>
+&lt;<span style="color:#1e90ff;font-weight:bold">p</span>&gt;This is not a comment! This is a real thing.&lt;/<span style="color:#1e90ff;font-weight:bold">p</span>&gt;</code></pre></td></tr></table>
+</div>
+</div>
+
+<p>If you copy this HTML into your editor, you&rsquo;ll see that the first part, the part surrounded by <code>&lt;!--...--&gt;</code>, doesn&rsquo;t show up. This is a <em>comment</em>, and comments are ignored by browsers when they display your HTML on the page. All comments are surrounded by <code>&lt;!--</code> and <code>--&gt;</code>, and can span multiple lines. Developers use comments like this to point out things in our code or add annotations or, well, comments, in our code, for other people to read. In this course, I&rsquo;ll use them to point out things in the middle of our code blocks.</p>
+
 <h3 id="tags-can-be-inside-other-tags">Tags can be inside other tags</h3>
 
 <p>HTML tags can be nested inside other tags to give additional structure to our text. If we wanted to have a bold bit of text inside a paragraph, for example, we can write</p>
@@ -176,22 +193,389 @@
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#1e90ff;font-weight:bold">p</span>&gt;
     Please check out
+    <span style="color:#aaa;font-style:italic">&lt;!-- this link below has an attribute, pointing to a URL --&gt;</span>
     &lt;<span style="color:#1e90ff;font-weight:bold">a</span> <span style="color:#1e90ff">href</span>=<span style="color:#a50">&#34;https://instagram.com/thesephist&#34;</span>&gt;my Instagram!&lt;/<span style="color:#1e90ff;font-weight:bold">a</span>&gt;
 &lt;/<span style="color:#1e90ff;font-weight:bold">p</span>&gt;</code></pre></td></tr></table>
 </div>
 </div>
 
-<p>The <code>href</code> stands for something roughly like &ldquo;hyperlink reference&rdquo;, and is an <em>attribute</em> we can add specifically to the <code>&lt;a&gt;</code> tag to denote where the link should point to. In this case, the <code>href</code> attribute also has a <strong>value</strong>, which is the URL that the link should navigate the user to, when tapped.</p>
+<p>The <code>href</code> stands for something roughly like &ldquo;hyperlink reference&rdquo;, and is an <em>attribute</em> we can add specifically to the <code>&lt;a&gt;</code> tag to denote where the link should point to. In this case, the <code>href</code> attribute also has a <strong>value</strong>, which is the URL that the link should navigate the user to, when tapped. Attributes all live in side the opening tag of an element, and follows the tag name (<code>a</code> in this case).</p>
 
-<p>Attributes are everywhere. We use them to denote where image files are when we add images, what buttons should do, where forms should be sent, where download links are, and so on.</p>
+<p>Attributes are everywhere. We use them to denote where image files are when we add images, what buttons should do, where forms should be sent, where download links are, and so on. We&rsquo;ll encounter more and more of these use cases of HTML attributes as we delve deeper into HTML.</p>
 
 <h2 id="part-2-adding-some-color-with-css">Part 2: Adding some color with CSS</h2>
 
-<h2 id="part-3-more-styles-with-css">Part 3: More styles with CSS</h2>
+<p>As you&rsquo;ve played around with your HTML code, you may have noticed that a webpage made of just HTML has a pretty boring, plain look. All of the text has a very <em>Times New Roman</em> feel to it, with set text sizes, set margins, and no sense of design. That&rsquo;s because HTML focuses on one thing, and does just that one thing very well: structuring your webpage. It defines headings, paragraphs, buttons, and boxes, and that&rsquo;s its only concern.</p>
+
+<p>This is a common pattern in well-designed software: <strong>complex things are built up from smaller, simpler parts that to small things very well.</strong></p>
+
+<p>But that must mean there&rsquo;s some other tool that handles makings things look a bit better! That other thing is <strong>CSS</strong>.</p>
+
+<h3 id="css-the-style-sheet">CSS, the Style Sheet</h3>
+
+<p>CSS is a different type of code (you may say a different language) that&rsquo;s embedded inside our HTML pages to modify how our HTML pages look. There&rsquo;s a few different ways to embed CSS code into our HTML pages, but we&rsquo;re going to start with the simples way, which is to put our CSS inside a <code>&lt;style&gt;...&lt;/style&gt;</code> tag.</p>
+
+<p>Let&rsquo;s say we have this HTML&hellip;</p>
+
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#1e90ff;font-weight:bold">h1</span>&gt;Hello there!&lt;/<span style="color:#1e90ff;font-weight:bold">h1</span>&gt;
+&lt;<span style="color:#1e90ff;font-weight:bold">p</span>&gt;Welcome to CSS&lt;/<span style="color:#1e90ff;font-weight:bold">p</span>&gt;</code></pre></td></tr></table>
+</div>
+</div>
+
+<p>&hellip; and we&rsquo;d like to change some things about how the heading (<code>&lt;h1&gt;</code>) looks. Specifically, we want to make it bright red, and we want to make it larger. We can do this with some CSS. Let&rsquo;s try&hellip;</p>
+
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#aaa;font-style:italic">&lt;!-- our CSS goes here, in between these tags --&gt;</span>
+&lt;<span style="color:#1e90ff;font-weight:bold">style</span>&gt;
+    <span style="color:#1e90ff;font-weight:bold">h1</span> {
+        <span style="color:#00a">color</span>: <span style="color:#00a">red</span>;
+        <span style="color:#00a">font-size</span>: <span style="color:#099">40</span><span style="color:#0aa">px</span>;
+    }
+&lt;/<span style="color:#1e90ff;font-weight:bold">style</span>&gt;
+
+<span style="color:#aaa;font-style:italic">&lt;!-- our HTML from before --&gt;</span>
+&lt;<span style="color:#1e90ff;font-weight:bold">h1</span>&gt;Hello there!&lt;/<span style="color:#1e90ff;font-weight:bold">h1</span>&gt;
+&lt;<span style="color:#1e90ff;font-weight:bold">p</span>&gt;Welcome to CSS&lt;/<span style="color:#1e90ff;font-weight:bold">p</span>&gt;
+&lt;<span style="color:#1e90ff;font-weight:bold">p</span>&gt;Let&#39;s get colorful.&lt;/<span style="color:#1e90ff;font-weight:bold">p</span>&gt;</code></pre></td></tr></table>
+</div>
+</div>
+
+<p>Adding these four lines of CSS changes the <em>appearance</em> of our HTML tags. Trying playing around with the values <code>red</code> and <code>40px</code>. Try different colors, and different font sizes. Let&rsquo;s break down this CSS code.</p>
+
+<h3 id="selectors-properties-and-values">Selectors, properties, and values</h3>
+
+<p>Here&rsquo;s our CSS from before.</p>
+
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#1e90ff;font-weight:bold">h1</span> {
+    <span style="color:#00a">color</span>: <span style="color:#00a">red</span>;
+    <span style="color:#00a">font-size</span>: <span style="color:#099">40</span><span style="color:#0aa">px</span>;
+}</code></pre></td></tr></table>
+</div>
+</div>
+
+<p>Intuitively, here&rsquo;s what this CSS code says:</p>
+
+<blockquote>
+<p>For all <code>&lt;h1&gt;</code> tags in this HTML page, set the (text) <strong>color</strong> to be &ldquo;red&rdquo;, and set the <strong>font size</strong> to be 40 pixels tall.</p>
+</blockquote>
+
+<p>See how parts of the description correlate with the code? There&rsquo;s a few parts to this short bit of CSS.</p>
+
+<ul>
+<li><code>h1</code> is a <strong>selector</strong>. It &ldquo;selects&rdquo; the parts of the HTML document that the following rules should apply to.</li>
+<li>The selector is followed by a block of code in curly braces <code>{...}</code>, which contains the CSS &ldquo;declarations&rdquo;, or rules, that apply to all <code>&lt;h1&gt;</code>s.</li>
+<li>Inside the curly braces, there are a list of declarations. Each declaration has a <strong>property</strong>, like <code>color</code> or <code>font-size</code>, and a <strong>value</strong>, like <code>red</code> or <code>40px</code>.</li>
+</ul>
+
+<p>Let&rsquo;s say we wanted to add another rule: we want all <code>&lt;h1&gt;</code>s to have a yellow background. We can add another line of CSS, like this (I&rsquo;ve temporarily omitted the HTML code here for brevity).</p>
+
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="display:block;width:100%;background-color:#e5e5e5"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#1e90ff;font-weight:bold">h1</span> {
+    <span style="color:#00a">color</span>: <span style="color:#00a">red</span>;
+    <span style="color:#00a">font-size</span>: <span style="color:#099">40</span><span style="color:#0aa">px</span>;
+<span style="display:block;width:100%;background-color:#e5e5e5">    <span style="color:#00a">background-color</span>: <span style="color:#00a">yellow</span>;
+</span>}</code></pre></td></tr></table>
+</div>
+</div>
+
+<p>The <code>background-color</code> property controls, yep, the background color of some HTML element.</p>
+
+<p><strong>An aside</strong>: CSS knows about a surprisingly large number of colors! There&rsquo;s <code>orangered</code> and <code>aquamarine</code> and <code>sandybrown</code>, all of which correspond to specific shades of color. You can find the full list of color labels <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value">here on MDN</a>. If your color isn&rsquo;t on there, you can also use a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#RGB_colors">hexadecimal color value</a>. If you don&rsquo;t understand what that is, don&rsquo;t worry about it just yet.</p>
+
+<h3 id="styling-different-tags">Styling different tags</h3>
+
+<p>Almost always, we&rsquo;re not content with styling just one element on the page. In this example, we may want to also apply some styles to our paragraph tag, <code>&lt;p&gt;</code>. Adding new rules to new elements in CSS is straightforward: just add another section with the new selector.</p>
+
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="display:block;width:100%;background-color:#e5e5e5"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span></span><span style="display:block;width:100%;background-color:#e5e5e5"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span></span><span style="display:block;width:100%;background-color:#e5e5e5"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span></span><span style="display:block;width:100%;background-color:#e5e5e5"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#1e90ff;font-weight:bold">style</span>&gt;
+    <span style="color:#1e90ff;font-weight:bold">h1</span> {
+        <span style="color:#00a">color</span>: <span style="color:#00a">red</span>;
+        <span style="color:#00a">font-size</span>: <span style="color:#099">40</span><span style="color:#0aa">px</span>;
+    }
+<span style="display:block;width:100%;background-color:#e5e5e5">    <span style="color:#1e90ff;font-weight:bold">p</span> {
+</span><span style="display:block;width:100%;background-color:#e5e5e5">        <span style="color:#00a">color</span>: <span style="color:#00a">blue</span>;
+</span><span style="display:block;width:100%;background-color:#e5e5e5">        <span style="color:#00a">font-style</span>: <span style="color:#00a">italic</span>;
+</span><span style="display:block;width:100%;background-color:#e5e5e5">    }
+</span>&lt;/<span style="color:#1e90ff;font-weight:bold">style</span>&gt;
+
+&lt;<span style="color:#1e90ff;font-weight:bold">h1</span>&gt;Hello there!&lt;/<span style="color:#1e90ff;font-weight:bold">h1</span>&gt;
+&lt;<span style="color:#1e90ff;font-weight:bold">p</span>&gt;Welcome to CSS&lt;/<span style="color:#1e90ff;font-weight:bold">p</span>&gt;
+&lt;<span style="color:#1e90ff;font-weight:bold">p</span>&gt;Let&#39;s get colorful.&lt;/<span style="color:#1e90ff;font-weight:bold">p</span>&gt;</code></pre></td></tr></table>
+</div>
+</div>
+
+<p>These four new lines of code says this:</p>
+
+<blockquote>
+<p>For all <code>&lt;p&gt;</code> tags in this HTML page, set the (text) <strong>color</strong> to be &ldquo;blue&rdquo;, and set the <strong>font style</strong> to be italic (italicize the text inside).</p>
+</blockquote>
+
+<p>You&rsquo;ll notice that the rules affect <em>all</em> <code>&lt;p&gt;</code> tags on the page, not just the first one. This is usually what we want, because that&rsquo;ll keep our design consistent.</p>
+
+<h3 id="fancy-selectors-classes-and-children-selectors">Fancy selectors: classes and children selectors</h3>
+
+<p>Consistency is <em>usually</em> what we want, but sometimes, we might want something to stick out. Let&rsquo;s say we have three paragraphs.</p>
+
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#1e90ff;font-weight:bold">p</span>&gt;First paragraph&lt;/<span style="color:#1e90ff;font-weight:bold">p</span>&gt;
+&lt;<span style="color:#1e90ff;font-weight:bold">p</span>&gt;Paragraph the second!&lt;/<span style="color:#1e90ff;font-weight:bold">p</span>&gt;
+&lt;<span style="color:#1e90ff;font-weight:bold">p</span>&gt;Paragraph number three&lt;/<span style="color:#1e90ff;font-weight:bold">p</span>&gt;</code></pre></td></tr></table>
+</div>
+</div>
+
+<p>But let&rsquo;s say our second paragraph is <em>super</em> important &ndash; we want just the second paragraph to be bright orange. How can we select just the second paragraph? We might try to use the <code>p</code> selector, but that&rsquo;ll select <em>all</em> paragraphs. Instead, we can select specific elements on the page with <strong>classes</strong>.</p>
+
+<p>A <strong>class</strong> is an attribute you can give to HTML elements (tags) that labels those specific elements. Classes can have any name you like, as long as it&rsquo;s all one-word, no spaces. Let&rsquo;s mark our second paragraph with a <code>special</code> class.</p>
+
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="display:block;width:100%;background-color:#e5e5e5"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#1e90ff;font-weight:bold">p</span>&gt;First paragraph&lt;/<span style="color:#1e90ff;font-weight:bold">p</span>&gt;
+<span style="display:block;width:100%;background-color:#e5e5e5">&lt;<span style="color:#1e90ff;font-weight:bold">p</span> <span style="color:#1e90ff">class</span>=<span style="color:#a50">&#34;special&#34;</span>&gt;Paragraph the second!&lt;/<span style="color:#1e90ff;font-weight:bold">p</span>&gt;
+</span>&lt;<span style="color:#1e90ff;font-weight:bold">p</span>&gt;Paragraph number three&lt;/<span style="color:#1e90ff;font-weight:bold">p</span>&gt;</code></pre></td></tr></table>
+</div>
+</div>
+
+<p>Once we&rsquo;ve marked the special paragraph with this class, we can <em>select</em> just this paragraph tag using the class in CSS. In CSS, we select by class name by using a dot <code>.</code> before the class name, like this.</p>
+
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="display:block;width:100%;background-color:#e5e5e5"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span><span style="display:block;width:100%;background-color:#e5e5e5"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></span><span style="display:block;width:100%;background-color:#e5e5e5"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></span><span style="display:block;width:100%;background-color:#e5e5e5"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></span><span style="display:block;width:100%;background-color:#e5e5e5"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="display:block;width:100%;background-color:#e5e5e5">&lt;<span style="color:#1e90ff;font-weight:bold">style</span>&gt;
+</span><span style="display:block;width:100%;background-color:#e5e5e5">    <span style="color:#1e90ff;font-weight:bold">p</span>.<span style="color:#0a0;text-decoration:underline">special</span> {
+</span><span style="display:block;width:100%;background-color:#e5e5e5">        <span style="color:#00a">color</span>: <span style="color:#00a">orange</span>;
+</span><span style="display:block;width:100%;background-color:#e5e5e5">    }
+</span><span style="display:block;width:100%;background-color:#e5e5e5">&lt;/<span style="color:#1e90ff;font-weight:bold">style</span>&gt;
+</span>
+&lt;<span style="color:#1e90ff;font-weight:bold">p</span>&gt;First paragraph&lt;/<span style="color:#1e90ff;font-weight:bold">p</span>&gt;
+&lt;<span style="color:#1e90ff;font-weight:bold">p</span> <span style="color:#1e90ff">class</span>=<span style="color:#a50">&#34;special&#34;</span>&gt;Paragraph the second!&lt;/<span style="color:#1e90ff;font-weight:bold">p</span>&gt;
+&lt;<span style="color:#1e90ff;font-weight:bold">p</span>&gt;Paragraph number three&lt;/<span style="color:#1e90ff;font-weight:bold">p</span>&gt;</code></pre></td></tr></table>
+</div>
+</div>
+
+<p>This CSS says,</p>
+
+<blockquote>
+<p>Only select <code>&lt;p&gt;</code> tags that also have a <code>special</code> class on them, and make those orange.</p>
+</blockquote>
+
+<p>In this case, the only thing that has the <code>special</code> class is a paragraph tag. So we can select with just the class name, without the tag name <code>p</code>:</p>
+
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="display:block;width:100%;background-color:#e5e5e5"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#1e90ff;font-weight:bold">style</span>&gt;
+<span style="display:block;width:100%;background-color:#e5e5e5">    .<span style="color:#0a0;text-decoration:underline">special</span> {
+</span>        <span style="color:#00a">color</span>: <span style="color:#00a">orange</span>;
+    }
+&lt;/<span style="color:#1e90ff;font-weight:bold">style</span>&gt;
+
+&lt;<span style="color:#1e90ff;font-weight:bold">p</span>&gt;First paragraph&lt;/<span style="color:#1e90ff;font-weight:bold">p</span>&gt;
+&lt;<span style="color:#1e90ff;font-weight:bold">p</span> <span style="color:#1e90ff">class</span>=<span style="color:#a50">&#34;special&#34;</span>&gt;Paragraph the second!&lt;/<span style="color:#1e90ff;font-weight:bold">p</span>&gt;
+&lt;<span style="color:#1e90ff;font-weight:bold">p</span>&gt;Paragraph number three&lt;/<span style="color:#1e90ff;font-weight:bold">p</span>&gt;</code></pre></td></tr></table>
+</div>
+</div>
+
+<p>Classes are very powerful. We can have multiple classes, and we can apply classes to multiple different things. Take this more advanced example:</p>
+
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#1e90ff;font-weight:bold">style</span>&gt;
+    <span style="color:#aaa;font-style:italic">/* This is what a comment looks like in CSS */</span>
+    <span style="color:#aaa;font-style:italic">/* A comment can span
+</span><span style="color:#aaa;font-style:italic">        multiple lines! */</span>
+    <span style="color:#aaa;font-style:italic">/* I&#39;ll use comments to explain what&#39;s going on here */</span>
+
+    <span style="color:#aaa;font-style:italic">/* We can separate selectors with commas to select
+</span><span style="color:#aaa;font-style:italic">        multiple things in one fell swoop */</span>
+    <span style="color:#1e90ff;font-weight:bold">h1</span>, <span style="color:#1e90ff;font-weight:bold">h2</span> {
+        <span style="color:#00a">color</span>: <span style="color:#00a">blue</span>;
+        <span style="color:#aaa;font-style:italic">/* This underlines text */</span>
+        <span style="color:#00a">text-decoration</span>: <span style="color:#00a">underline</span>;
+    }
+    <span style="color:#1e90ff;font-weight:bold">p</span> {
+        <span style="color:#aaa;font-style:italic">/* This set the size of all paragraphs
+</span><span style="color:#aaa;font-style:italic">            to 18 pixels high */</span>
+        <span style="color:#00a">font-size</span>: <span style="color:#099">18</span><span style="color:#0aa">px</span>;
+    }
+    <span style="color:#1e90ff;font-weight:bold">p</span>.<span style="color:#0a0;text-decoration:underline">first-paragraph</span> {
+        <span style="color:#00a">font-style</span>: <span style="color:#00a">italic</span>;
+    }
+    <span style="color:#aaa;font-style:italic">/* this selects both h1.special and p.special */</span>
+    .<span style="color:#0a0;text-decoration:underline">special</span> {
+        <span style="color:#00a">background</span>: <span style="color:#00a">pink</span>;
+    }
+&lt;/<span style="color:#1e90ff;font-weight:bold">style</span>&gt;
+
+&lt;<span style="color:#1e90ff;font-weight:bold">h1</span> <span style="color:#1e90ff">class</span>=<span style="color:#a50">&#34;special&#34;</span>&gt;About Linus&lt;/<span style="color:#1e90ff;font-weight:bold">h1</span>&gt;
+<span style="color:#aaa;font-style:italic">&lt;!-- when we separate class names with spaces in HTML,
+</span><span style="color:#aaa;font-style:italic">    the element gets two classes, not a single class
+</span><span style="color:#aaa;font-style:italic">    that&#39;s called &#34;first-paragraph special&#34; --&gt;</span>
+&lt;<span style="color:#1e90ff;font-weight:bold">p</span> <span style="color:#1e90ff">class</span>=<span style="color:#a50">&#34;first-paragraph special&#34;</span>&gt;
+    Linus is a programmer and designer
+    from West Lafayette, Indiana, USA.
+&lt;/<span style="color:#1e90ff;font-weight:bold">p</span>&gt;
+
+<span style="color:#aaa;font-style:italic">&lt;!-- this tag creates a horizontal line separator --&gt;</span>
+&lt;<span style="color:#1e90ff;font-weight:bold">hr</span>/&gt;
+
+&lt;<span style="color:#1e90ff;font-weight:bold">h2</span>&gt;Contact&lt;/<span style="color:#1e90ff;font-weight:bold">h2</span>&gt;
+&lt;<span style="color:#1e90ff;font-weight:bold">p</span>&gt;You can find Linus at &lt;<span style="color:#1e90ff;font-weight:bold">a</span> <span style="color:#1e90ff">href</span>=<span style="color:#a50">&#34;https://linus.zone/now&#34;</span>&gt;his website&lt;/<span style="color:#1e90ff;font-weight:bold">a</span>&gt;.&lt;/<span style="color:#1e90ff;font-weight:bold">p</span>&gt;
+&lt;<span style="color:#1e90ff;font-weight:bold">p</span>&gt;He is also on Twitter, at @thesephist.&lt;/<span style="color:#1e90ff;font-weight:bold">p</span>&gt;</code></pre></td></tr></table>
+</div>
+</div>
+
+<p>CSS gives us a <em>huge</em> amoutn of freedom as web designers and developers to express our creativity on the canvas of the web, and once you get a grasp of the basics from above, you can create lots of interesting designs.</p>
+
+<p>We&rsquo;ll explore more and more CSS properties as we move forward, so there&rsquo;s no need to learn every property now. For this milestone, take the last sample above, copy-paste it into a Codeframe, and try these changes:</p>
+
+<ul>
+<li>Change <code>color</code> property values for different elements on the page, and see if the results fit your expectations.</li>
+<li>Take the last paragraph that begins with &ldquo;He is also on twitter&hellip;&rdquo;, and make the font larger (24px) for <em>just</em> that paragraph. You may need to give that element a new class to do this.</li>
+<li>On the link element (<code>&lt;a&gt;</code>)&hellip;
+
+<ul>
+<li>By default, links appear blue (like on Google Search). Make the link here appear purple.</li>
+<li>Let&rsquo;s make the link stand out a bit more. Make the text inside the link bolder, using just CSS. Google for the <code>font-weight</code> CSS property to help here.</li>
+</ul></li>
+</ul>
+
+<p>Once you&rsquo;ve explored CSS a bit here, we&rsquo;re ready to dive into our first milestone project! Let&rsquo;s build you an about-you page, completely from scratch, that you can put on the web.</p>
+
+<h2 id="part-3-about-page-putting-it-all-together">Part 3: About page - Putting it all together</h2>
 
         </article>
         </div>
