@@ -1,7 +1,6 @@
 body {
     --cf-accent: #4e28bf;
     --cf-background: #d4d2f5;
-
     --cf-serif: 'Playfair Display', 'Georgia', serif;
 }
 
@@ -288,9 +287,21 @@ ul li::before {
 }
 
 .highlight {
-    overflow-x: auto;
+    overflow: visible;
     padding: 12px 8px 12px 16px;
     margin-bottom: 32px;
+    /* for positioning the "try it" button */
+    position: relative;
+}
+
+.cfSampleLink {
+    position: absolute;
+    top: -28px;
+    right: 6px;
+    left: unset;
+    font-size: .8em;
+    display: block;
+    color: var(--cf-accent);
 }
 
 .highlight pre {

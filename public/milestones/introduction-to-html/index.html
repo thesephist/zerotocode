@@ -50,7 +50,7 @@
 
 <h2 id="part-1-html-tags-and-elements">Part 1: HTML Tags and Elements</h2>
 
-<p>HTML is what we call a <em>markup language</em>. It &ldquo;marks up&rdquo; text with additional meaning, like &ldquo;this bit of text is a heading&rdquo; or &ldquo;this part of the text should be italicized.&rdquo; We can also use HTML to add non-text elements like images, videos, and links to our pages as well as interactive things like inputs and buttons. For today, let&rsquo;s start with simple text.</p>
+<p>Every webpage, including this one you&rsquo;re reading right now, starts with some HTML code. HTML is what we call a <em>markup language</em>. It &ldquo;marks up&rdquo; text with additional meaning, like &ldquo;this bit of text is a heading&rdquo; or &ldquo;this part of the text should be italicized.&rdquo; We can also use HTML to add non-text elements like images, videos, and links to our pages as well as interactive things like inputs and buttons. For today, let&rsquo;s start with simple text.</p>
 
 <h3 id="everything-is-a-tag">Everything is a tag</h3>
 
@@ -93,7 +93,7 @@
 
 <p>There&rsquo;s three tags here, including the <code>&lt;h1&gt;</code> tag for a header. All three have closing tags, like they should. You&rsquo;ll also notice the line numbers in front of the sample code &ndash; from here on, I&rsquo;ll label each line of code with the line number, so we can refer to them easier. When you&rsquo;re copying these samples to test them on your own, you should omit them.</p>
 
-<h3 id="html-comments">HTML Comments</h3>
+<h3 id="a-comment-on-html-comments">A comment on HTML Comments</h3>
 
 <p>Consider this bit of HTML.</p>
 
@@ -108,7 +108,7 @@
 </div>
 </div>
 
-<p>If you copy this HTML into your editor, you&rsquo;ll see that the first part, the part surrounded by <code>&lt;!--...--&gt;</code>, doesn&rsquo;t show up. This is a <em>comment</em>, and comments are ignored by browsers when they display your HTML on the page. All comments are surrounded by <code>&lt;!--</code> and <code>--&gt;</code>, and can span multiple lines. Developers use comments like this to point out things in our code or add annotations or, well, comments, in our code, for other people to read. In this course, I&rsquo;ll use them to point out things in the middle of our code blocks.</p>
+<p>If you view this HTML in your editor, you&rsquo;ll see that the first part, the part surrounded by <code>&lt;!--...--&gt;</code>, doesn&rsquo;t show up. This is a <em>comment</em>, and comments are ignored by browsers when they display your HTML on the page. All comments are surrounded by <code>&lt;!--</code> and <code>--&gt;</code>, and can span multiple lines. Developers use comments like this to point out things in our code or add annotations or, well, comments, in our code, for other people to read. In this course, I&rsquo;ll use them to point out things in the middle of our code blocks.</p>
 
 <h3 id="tags-can-be-inside-other-tags">Tags can be inside other tags</h3>
 
@@ -127,7 +127,7 @@
 </div>
 </div>
 
-<p>Here, we have a paragraph (<code>&lt;p&gt;</code>), that contains a <code>&lt;strong&gt;</code> tag. The strong tag defines a bit of text that should be bold on the page. We can even nest further</p>
+<p>Here, we have a paragraph (<code>&lt;p&gt;</code>), that contains a <code>&lt;strong&gt;</code> tag. The strong tag defines a bit of text that should be bold on the page. We can even nest further:</p>
 
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -148,7 +148,7 @@
 
 <p>Here, we use the <code>&lt;em&gt;</code> tag, which represents some text to be <em>italicized</em> on the page. If you&rsquo;ve written HTML before, you may have come across <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code> tags, which bold and italicize as well. However, <code>&lt;em&gt;</code> and <code>&lt;strong&gt;</code> are their modern equivalents; when you have a choice, bias for the modern replacements.</p>
 
-<p>You may also notice that we&rsquo;ve started indenting nested parts of our code further to the right. Because HTML doesn&rsquo;t really care about &ldquo;whitespace&rdquo; or spaces, indentation is a matter of taste and personal preference. However, indenting different nested parts of your HTML code will help keep the structure of your page straight, as you build more complex sites. <strong>Get in the habit of indenting HTML code!</strong> It&rsquo;ll be helpful in the long run.</p>
+<p>You may also notice that we&rsquo;ve started indenting nested parts of our code further to the right. Because HTML doesn&rsquo;t really care about &ldquo;whitespace&rdquo; or spaces in between tags and keywords, indentation is a matter of taste and personal preference. However, indenting different nested parts of your HTML code will help keep the structure of your page straight, as you build more complex sites. <strong>Get in the habit of indenting HTML code!</strong> It&rsquo;ll be helpful in the long run.</p>
 
 <h3 id="beware-of-common-tag-mistakes">Beware of common tag mistakes</h3>
 
@@ -204,7 +204,7 @@
 </div>
 </div>
 
-<p>The <code>href</code> stands for something roughly like &ldquo;hyperlink reference&rdquo;, and is an <em>attribute</em> we can add specifically to the <code>&lt;a&gt;</code> tag to denote where the link should point to. In this case, the <code>href</code> attribute also has a <strong>value</strong>, which is the URL that the link should navigate the user to, when tapped. Attributes all live in side the opening tag of an element, and follows the tag name (<code>a</code> in this case).</p>
+<p>The <code>href</code> stands for something roughly like &ldquo;hyperlink reference&rdquo;, and is an <em>attribute</em> we can add specifically to an<code>&lt;a&gt;</code> tag to denote where the link should point to. In this case, the <code>href</code> attribute also has a <strong>value</strong>, which is the URL that the link should navigate the user to, when tapped. Attributes all live in side the opening tag of an element, and follows the tag name (<code>a</code> in this case).</p>
 
 <p>Attributes are everywhere. We use them to denote where image files are when we add images, what buttons should do, where forms should be sent, where download links are, and so on. We&rsquo;ll encounter more and more of these use cases of HTML attributes as we delve deeper into HTML.</p>
 
@@ -218,7 +218,7 @@
 
 <h3 id="css-the-style-sheet">CSS, the Style Sheet</h3>
 
-<p>CSS is a different type of code (you may say a different language) that&rsquo;s embedded inside our HTML pages to modify how our HTML pages look. There&rsquo;s a few different ways to embed CSS code into our HTML pages, but we&rsquo;re going to start with the simples way, which is to put our CSS inside a <code>&lt;style&gt;...&lt;/style&gt;</code> tag.</p>
+<p>CSS is a different type of code (you may say a different language) that&rsquo;s embedded inside our HTML pages to modify how our HTML pages look. There&rsquo;s a few different ways to embed CSS code into our HTML pages, but we&rsquo;re going to start with the simplest way, which is to put our CSS inside a <code>&lt;style&gt;...&lt;/style&gt;</code> tag.</p>
 
 <p>Let&rsquo;s say we have this HTML&hellip;</p>
 
@@ -226,10 +226,12 @@
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#1e90ff;font-weight:bold">h1</span>&gt;Hello there!&lt;/<span style="color:#1e90ff;font-weight:bold">h1</span>&gt;
-&lt;<span style="color:#1e90ff;font-weight:bold">p</span>&gt;Welcome to CSS&lt;/<span style="color:#1e90ff;font-weight:bold">p</span>&gt;</code></pre></td></tr></table>
+&lt;<span style="color:#1e90ff;font-weight:bold">p</span>&gt;Welcome to CSS&lt;/<span style="color:#1e90ff;font-weight:bold">p</span>&gt;
+&lt;<span style="color:#1e90ff;font-weight:bold">p</span>&gt;Let&#39;s get colorful.&lt;/<span style="color:#1e90ff;font-weight:bold">p</span>&gt;</code></pre></td></tr></table>
 </div>
 </div>
 
@@ -509,14 +511,11 @@
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#1e90ff;font-weight:bold">style</span>&gt;
     <span style="color:#aaa;font-style:italic">/* This is what a comment looks like in CSS */</span>
-    <span style="color:#aaa;font-style:italic">/* A comment can span
-</span><span style="color:#aaa;font-style:italic">        multiple lines! */</span>
+
     <span style="color:#aaa;font-style:italic">/* I&#39;ll use comments to explain what&#39;s going on here */</span>
 
     <span style="color:#aaa;font-style:italic">/* We can separate selectors with commas to select
@@ -541,6 +540,7 @@
 &lt;/<span style="color:#1e90ff;font-weight:bold">style</span>&gt;
 
 &lt;<span style="color:#1e90ff;font-weight:bold">h1</span> <span style="color:#1e90ff">class</span>=<span style="color:#a50">&#34;special&#34;</span>&gt;About Linus&lt;/<span style="color:#1e90ff;font-weight:bold">h1</span>&gt;
+
 <span style="color:#aaa;font-style:italic">&lt;!-- when we separate class names with spaces in HTML,
 </span><span style="color:#aaa;font-style:italic">    the element gets two classes, not a single class
 </span><span style="color:#aaa;font-style:italic">    that&#39;s called &#34;first-paragraph special&#34; --&gt;</span>
@@ -549,10 +549,8 @@
     from West Lafayette, Indiana, USA.
 &lt;/<span style="color:#1e90ff;font-weight:bold">p</span>&gt;
 
-<span style="color:#aaa;font-style:italic">&lt;!-- this tag creates a horizontal line separator --&gt;</span>
-&lt;<span style="color:#1e90ff;font-weight:bold">hr</span>/&gt;
-
 &lt;<span style="color:#1e90ff;font-weight:bold">h2</span>&gt;Contact&lt;/<span style="color:#1e90ff;font-weight:bold">h2</span>&gt;
+
 &lt;<span style="color:#1e90ff;font-weight:bold">p</span>&gt;You can find Linus at &lt;<span style="color:#1e90ff;font-weight:bold">a</span> <span style="color:#1e90ff">href</span>=<span style="color:#a50">&#34;https://linus.zone/now&#34;</span>&gt;his website&lt;/<span style="color:#1e90ff;font-weight:bold">a</span>&gt;.&lt;/<span style="color:#1e90ff;font-weight:bold">p</span>&gt;
 &lt;<span style="color:#1e90ff;font-weight:bold">p</span>&gt;He is also on Twitter, at @thesephist.&lt;/<span style="color:#1e90ff;font-weight:bold">p</span>&gt;</code></pre></td></tr></table>
 </div>
@@ -560,7 +558,7 @@
 
 <p>CSS gives us a <em>huge</em> amount of freedom as web designers and developers to express our creativity on the canvas of the web, and once you get a grasp of the basics from above, you can create lots of interesting designs.</p>
 
-<p>We&rsquo;ll explore more and more CSS properties as we move forward, so there&rsquo;s no need to learn every property now. For this milestone, take the last sample above, copy-paste it into a Codeframe, and try these changes:</p>
+<p>We&rsquo;ll explore more and more CSS properties as we move forward, so there&rsquo;s no need to learn every property now. For this part, take the last sample above, open it in Codeframe (you can do so with the <span class="fixed inline button">Try this →</span> button), and try to make these changes:</p>
 
 <ul>
 <li>Change <code>color</code> property values for different elements on the page, and see if the results fit your expectations.</li>
@@ -569,7 +567,7 @@
 
 <ul>
 <li>By default, links appear blue (like on Google Search). Make the link here appear purple.</li>
-<li>Let&rsquo;s make the link stand out a bit more. Make the text inside the link bolder, using just CSS. Google for the <code>font-weight</code> CSS property to help here.</li>
+<li>Let&rsquo;s make the link stand out a bit more. Make the text inside the link bolder, using just CSS. Search Google for the <code>font-weight</code> CSS property to help here.</li>
 </ul></li>
 </ul>
 
@@ -586,11 +584,34 @@
 <ul>
 <li>A first-level header (<code>&lt;h1&gt;</code>) at the top of the page, that says &ldquo;About [your name]&rdquo;</li>
 <li>An image, which will be your profile picture</li>
-<li>A tweet-sized, 1-2 sentence bio about you</li>
-<li>A couple of subsections, each section under an <code>&lt;h2&gt;</code> (since they&rsquo;re under the big main <code>&lt;h1&gt;</code> section). What are you interested in? What are you working on? What music or films do you like?</li>
+<li>A tweet-sized, 1-2 sentence bio about you in a paragraph (<code>&lt;p&gt;</code>) or more</li>
+<li>A couple of subsections, each section under an <code>&lt;h2&gt;</code> (since they&rsquo;re of lower importance the big main <code>&lt;h1&gt;</code> section). What are you interested in? What are you working on? What music or films do you like? Make a list of some kind &ndash; we&rsquo;ll show you how to do this down below.</li>
 </ul>
 
 <p>Remember that the tag we use to include an image is <code>&lt;img&gt;</code>. The image tag also needs an <code>href</code> attribute, which should be set equal to a link to the image.</p>
+
+<h4 id="adding-an-image-in-html">Adding an image in HTML</h4>
+
+<p>There&rsquo;s an HTML tag specifically designed to include images on a webpage, the <code>&lt;img&gt;</code> tag. The image tag looks like this in use.</p>
+
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#1e90ff;font-weight:bold">img</span> <span style="color:#1e90ff">src</span>=<span style="color:#a50">&#34;https://www.ocf.berkeley.edu/~linuslee/pic.jpg&#34;</span> <span style="color:#1e90ff">alt</span>=<span style="color:#a50">&#34;Linus&#39;s Profile&#34;</span> /&gt;</code></pre></td></tr></table>
+</div>
+</div>
+
+<p>There&rsquo;s a few interesting things about the <code>&lt;img&gt;</code> tag.</p>
+
+<ul>
+<li>It doesn&rsquo;t have a closing tag! There isn&rsquo;t a <code>&lt;/img&gt;</code> at the end. THis is because the image tag is one of several <a href="https://developer.mozilla.org/en-US/docs/Glossary/Empty_element">self-closing tags</a>. Self closing tags exist because some tags can&rsquo;t sensibly contain other tags. (What does it mean if an image tag has a paragraph tag inside?) A self-closing tag only needs the opening tag, and it closes automatically. You might notice the <code>/&gt;</code> at the end, which is another way to indicate that this tag is self-closing.</li>
+<li>It has a <code>src</code> attribute, which is set to the URL of the image it should display. You can upload images to the web on services like <a href="https://imgur.com">Imgur</a> and take their URL to embed your own images into your page.</li>
+<li>It has an <code>alt</code> attribute, which is some textual description of the image. The <code>alt</code> text is used for when the image is not found (broken link), or when the reader of your page is using a <a href="https://en.wikipedia.org/wiki/Screen_reader">screen reader</a>.</li>
+</ul>
+
+<p>Very often, the image you embed won&rsquo;t be the size you want &ndash; it&rsquo;ll be to big or too small. We can tweak that by setting a width or height with CSS on the image.</p>
 
 <h4 id="a-brief-primer-on-making-a-list">A brief primer on making a list</h4>
 
@@ -795,6 +816,30 @@
         </div>
     </section>
 </main>
+
+<script>
+    
+    
+
+    const createTryLinkFor = (highlightBox, codeEl) => {
+        if (codeEl) {
+            const cfLink = document.createElement('a');
+            cfLink.classList.add('button');
+            cfLink.classList.add('cfSampleLink');
+            cfLink.href = `https:\/\/beta.codeframe.co\/new?html=${encodeURIComponent(codeEl.textContent)}`;
+            cfLink.target = '_blank';
+            cfLink.textContent = 'Try this →';
+            highlightBox.appendChild(cfLink);
+        }
+    }
+
+    for (const highlightedEl of document.querySelectorAll('.highlight')) {
+        const codeEl
+            = highlightedEl.querySelector('td:last-child code.language-html')
+            || highlightedEl.querySelector('td:last-child code.language-javascript');
+        createTryLinkFor(highlightedEl, codeEl);
+    }
+</script>
 
 
 

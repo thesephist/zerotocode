@@ -10,7 +10,7 @@ In this milestone, we'll get acquainted with HTML and CSS, two of the key buildi
 
 ## Part 1: HTML Tags and Elements
 
-HTML is what we call a _markup language_. It "marks up" text with additional meaning, like "this bit of text is a heading" or "this part of the text should be italicized." We can also use HTML to add non-text elements like images, videos, and links to our pages as well as interactive things like inputs and buttons. For today, let's start with simple text.
+Every webpage, including this one you're reading right now, starts with some HTML code. HTML is what we call a _markup language_. It "marks up" text with additional meaning, like "this bit of text is a heading" or "this part of the text should be italicized." We can also use HTML to add non-text elements like images, videos, and links to our pages as well as interactive things like inputs and buttons. For today, let's start with simple text.
 
 ### Everything is a tag
 
@@ -48,7 +48,7 @@ Here's HTML for a heading, followed by two paragraphs.
 
 There's three tags here, including the `<h1>` tag for a header. All three have closing tags, like they should. You'll also notice the line numbers in front of the sample code -- from here on, I'll label each line of code with the line number, so we can refer to them easier. When you're copying these samples to test them on your own, you should omit them.
 
-### HTML Comments
+### A comment on HTML Comments
 
 Consider this bit of HTML.
 
@@ -57,7 +57,7 @@ Consider this bit of HTML.
 <p>This is not a comment! This is a real thing.</p>
 {{</highlight>}}
 
-If you copy this HTML into your editor, you'll see that the first part, the part surrounded by `<!--...-->`, doesn't show up. This is a _comment_, and comments are ignored by browsers when they display your HTML on the page. All comments are surrounded by `<!--` and `-->`, and can span multiple lines. Developers use comments like this to point out things in our code or add annotations or, well, comments, in our code, for other people to read. In this course, I'll use them to point out things in the middle of our code blocks.
+If you view this HTML in your editor, you'll see that the first part, the part surrounded by `<!--...-->`, doesn't show up. This is a _comment_, and comments are ignored by browsers when they display your HTML on the page. All comments are surrounded by `<!--` and `-->`, and can span multiple lines. Developers use comments like this to point out things in our code or add annotations or, well, comments, in our code, for other people to read. In this course, I'll use them to point out things in the middle of our code blocks.
 
 ### Tags can be inside other tags
 
@@ -69,7 +69,7 @@ HTML tags can be nested inside other tags to give additional structure to our te
 </p>
 {{</highlight>}}
 
-Here, we have a paragraph (`<p>`), that contains a `<strong>` tag. The strong tag defines a bit of text that should be bold on the page. We can even nest further
+Here, we have a paragraph (`<p>`), that contains a `<strong>` tag. The strong tag defines a bit of text that should be bold on the page. We can even nest further:
 
 {{<highlight html>}}
 <main>
@@ -81,7 +81,7 @@ Here, we have a paragraph (`<p>`), that contains a `<strong>` tag. The strong ta
 
 Here, we use the `<em>` tag, which represents some text to be _italicized_ on the page. If you've written HTML before, you may have come across `<b>` and `<i>` tags, which bold and italicize as well. However, `<em>` and `<strong>` are their modern equivalents; when you have a choice, bias for the modern replacements.
 
-You may also notice that we've started indenting nested parts of our code further to the right. Because HTML doesn't really care about "whitespace" or spaces, indentation is a matter of taste and personal preference. However, indenting different nested parts of your HTML code will help keep the structure of your page straight, as you build more complex sites. **Get in the habit of indenting HTML code!** It'll be helpful in the long run.
+You may also notice that we've started indenting nested parts of our code further to the right. Because HTML doesn't really care about "whitespace" or spaces in between tags and keywords, indentation is a matter of taste and personal preference. However, indenting different nested parts of your HTML code will help keep the structure of your page straight, as you build more complex sites. **Get in the habit of indenting HTML code!** It'll be helpful in the long run.
 
 ### Beware of common tag mistakes
 
@@ -124,7 +124,7 @@ If you try this sample, you'll notice that nothing actually happens (yet) when w
 </p>
 {{</highlight>}}
 
-The `href` stands for something roughly like "hyperlink reference", and is an _attribute_ we can add specifically to the `<a>` tag to denote where the link should point to. In this case, the `href` attribute also has a **value**, which is the URL that the link should navigate the user to, when tapped. Attributes all live in side the opening tag of an element, and follows the tag name (`a` in this case).
+The `href` stands for something roughly like "hyperlink reference", and is an _attribute_ we can add specifically to an`<a>` tag to denote where the link should point to. In this case, the `href` attribute also has a **value**, which is the URL that the link should navigate the user to, when tapped. Attributes all live in side the opening tag of an element, and follows the tag name (`a` in this case).
 
 Attributes are everywhere. We use them to denote where image files are when we add images, what buttons should do, where forms should be sent, where download links are, and so on. We'll encounter more and more of these use cases of HTML attributes as we delve deeper into HTML.
 
@@ -138,13 +138,14 @@ But that must mean there's some other tool that handles makings things look a bi
 
 ### CSS, the Style Sheet
 
-CSS is a different type of code (you may say a different language) that's embedded inside our HTML pages to modify how our HTML pages look. There's a few different ways to embed CSS code into our HTML pages, but we're going to start with the simples way, which is to put our CSS inside a `<style>...</style>` tag.
+CSS is a different type of code (you may say a different language) that's embedded inside our HTML pages to modify how our HTML pages look. There's a few different ways to embed CSS code into our HTML pages, but we're going to start with the simplest way, which is to put our CSS inside a `<style>...</style>` tag.
 
 Let's say we have this HTML...
 
 {{<highlight html>}}
 <h1>Hello there!</h1>
 <p>Welcome to CSS</p>
+<p>Let's get colorful.</p>
 {{</highlight>}}
 
 ... and we'd like to change some things about how the heading (`<h1>`) looks. Specifically, we want to make it bright red, and we want to make it larger. We can do this with some CSS. Let's try...
@@ -285,8 +286,7 @@ Classes are very powerful. We can have multiple classes, and we can apply classe
 {{<highlight html>}}
 <style>
     /* This is what a comment looks like in CSS */
-    /* A comment can span
-        multiple lines! */
+
     /* I'll use comments to explain what's going on here */
 
     /* We can separate selectors with commas to select
@@ -311,6 +311,7 @@ Classes are very powerful. We can have multiple classes, and we can apply classe
 </style>
 
 <h1 class="special">About Linus</h1>
+
 <!-- when we separate class names with spaces in HTML,
     the element gets two classes, not a single class
     that's called "first-paragraph special" -->
@@ -319,23 +320,21 @@ Classes are very powerful. We can have multiple classes, and we can apply classe
     from West Lafayette, Indiana, USA.
 </p>
 
-<!-- this tag creates a horizontal line separator -->
-<hr/>
-
 <h2>Contact</h2>
+
 <p>You can find Linus at <a href="https://linus.zone/now">his website</a>.</p>
 <p>He is also on Twitter, at @thesephist.</p>
 {{</highlight>}}
 
 CSS gives us a _huge_ amount of freedom as web designers and developers to express our creativity on the canvas of the web, and once you get a grasp of the basics from above, you can create lots of interesting designs.
 
-We'll explore more and more CSS properties as we move forward, so there's no need to learn every property now. For this milestone, take the last sample above, copy-paste it into a Codeframe, and try these changes:
+We'll explore more and more CSS properties as we move forward, so there's no need to learn every property now. For this part, take the last sample above, open it in Codeframe (you can do so with the <span class="fixed inline button">Try this →</span> button), and try to make these changes:
 
 - Change `color` property values for different elements on the page, and see if the results fit your expectations.
 - Take the last paragraph that begins with "He is also on twitter...", and make the font larger (24px) for _just_ that paragraph. You may need to give that element a new class to do this.
 - On the link element (`<a>`)...
     - By default, links appear blue (like on Google Search). Make the link here appear purple.
-    - Let's make the link stand out a bit more. Make the text inside the link bolder, using just CSS. Google for the `font-weight` CSS property to help here.
+    - Let's make the link stand out a bit more. Make the text inside the link bolder, using just CSS. Search Google for the `font-weight` CSS property to help here.
 
 Once you've explored CSS a bit here, we're ready to dive into our first milestone project! Let's build you an about-you page, completely from scratch, that you can put on the web.
 
@@ -349,10 +348,26 @@ Your about page can include virtually anything you like, but should at least inc
 
 - A first-level header (`<h1>`) at the top of the page, that says "About [your name]"
 - An image, which will be your profile picture
-- A tweet-sized, 1-2 sentence bio about you
-- A couple of subsections, each section under an `<h2>` (since they're under the big main `<h1>` section). What are you interested in? What are you working on? What music or films do you like?
+- A tweet-sized, 1-2 sentence bio about you in a paragraph (`<p>`) or more
+- A couple of subsections, each section under an `<h2>` (since they're of lower importance the big main `<h1>` section). What are you interested in? What are you working on? What music or films do you like? Make a list of some kind -- we'll show you how to do this down below.
 
 Remember that the tag we use to include an image is `<img>`. The image tag also needs an `href` attribute, which should be set equal to a link to the image.
+
+#### Adding an image in HTML
+
+There's an HTML tag specifically designed to include images on a webpage, the `<img>` tag. The image tag looks like this in use.
+
+{{<highlight html>}}
+<img src="https://www.ocf.berkeley.edu/~linuslee/pic.jpg" alt="Linus's Profile" />
+{{</highlight>}}
+
+There's a few interesting things about the `<img>` tag.
+
+- It doesn't have a closing tag! There isn't a `</img>` at the end. THis is because the image tag is one of several [self-closing tags](https://developer.mozilla.org/en-US/docs/Glossary/Empty_element). Self closing tags exist because some tags can't sensibly contain other tags. (What does it mean if an image tag has a paragraph tag inside?) A self-closing tag only needs the opening tag, and it closes automatically. You might notice the `/>` at the end, which is another way to indicate that this tag is self-closing.
+- It has a `src` attribute, which is set to the URL of the image it should display. You can upload images to the web on services like [Imgur](https://imgur.com) and take their URL to embed your own images into your page.
+- It has an `alt` attribute, which is some textual description of the image. The `alt` text is used for when the image is not found (broken link), or when the reader of your page is using a [screen reader](https://en.wikipedia.org/wiki/Screen_reader).
+
+Very often, the image you embed won't be the size you want -- it'll be to big or too small. We can tweak that by setting a width or height with CSS on the image.
 
 #### A brief primer on making a list
 

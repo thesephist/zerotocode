@@ -48,7 +48,7 @@ You can edit the HTML, CSS (inside the `<style>` block), and JavaScript code on 
     <iframe src="https://beta.codeframe.co/new?from=ztc_about" frameborder="0" class="liveEditor"></iframe>
 </div>
 
-For a gentle introduction to Codeframe, let's write some HTML! Make sure the <span class="fixed inline active button">HTML</span> mode is selected (it is by default), and type this snippet of HTML code into the editor pane, replacing `[your name]` with your name:
+For a gentle introduction to Codeframe, let's write some HTML! Make sure the <span class="fixed inline active button">HTML</span> mode is selected (it is by default), and type this snippet of HTML code into the editor pane on the right/bottom, replacing `[your name]` with your name:
 
 {{<highlight html "linenos=">}}
 <h1>Hi Codeframe!</h1>

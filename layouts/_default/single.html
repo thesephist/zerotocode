@@ -11,5 +11,28 @@
     </section>
 </main>
 
-{{ end }}
+<script>
+    // For each highlighted block of code that's .language-html,
+    //  log its code text.
 
+    const createTryLinkFor = (highlightBox, codeEl) => {
+        if (codeEl) {
+            const cfLink = document.createElement('a');
+            cfLink.classList.add('button');
+            cfLink.classList.add('cfSampleLink');
+            cfLink.href = `https:\/\/beta.codeframe.co\/new?html=${encodeURIComponent(codeEl.textContent)}`;
+            cfLink.target = '_blank';
+            cfLink.textContent = 'Try this →';
+            highlightBox.appendChild(cfLink);
+        }
+    }
+
+    for (const highlightedEl of document.querySelectorAll('.highlight')) {
+        const codeEl
+            = highlightedEl.querySelector('td:last-child code.language-html')
+            || highlightedEl.querySelector('td:last-child code.language-javascript');
+        createTryLinkFor(highlightedEl, codeEl);
+    }
+</script>
+
+{{ end }}
