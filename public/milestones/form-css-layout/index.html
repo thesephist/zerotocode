@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+
+
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+<link rel="stylesheet" href="https://beta.codeframe.co/static/css/main.css"/>
+<link rel="stylesheet" href="/css/theme.css"/>
+
+<title>Building a form: CSS Layout and Interactivity | Zero to Code</title>
+<link rel="canonical" href="https://zerotocode.org/milestones/form-css-layout/">
+
+    </head>
+
+    <body>
+        <header>
+    <div class="logo">
+        <a class="button" href="/">Zero to Code</a>
+    </div>
+    <nav>
+        <a class="button milestonesButton" href="/milestones">
+            Milestones
+        </a>
+        <a class="button milestonesButton" href="/about">
+            About
+        </a>
+        <a class="button" href="https://github.com/thesephist/zerotocode" target="_blank">
+            <span class="mobile-hidden">View Source on</span> GitHub
+        </a>
+    </nav>
+</header>
+
+
+
+        
+
+<main aria-role="main">
+    <section class="hero">
+        <div class="overlay">
+        <h1>Building a form: CSS Layout and Interactivity</h1>
+        <article>
+            
+
+<p>In this milestone, we&rsquo;ll meet some new, more interesting, interactive HTML elements like buttons and inputs, and we&rsquo;ll dive deeper into CSS by looking at how we can use CSS properties to move things around on our page.</p>
+
+<h2 id="part-1-semantic-html">Part 1: Semantic HTML</h2>
+
+<p>In milestone 1, we encountered some simple HTML tags like <code>&lt;p&gt;</code> and <code>&lt;h1&gt;</code> that corresponded to chunks of text on our page. There&rsquo;s also a set of HTML tags that correspond not to specific parts of text, but to <em>sections of a webpage</em>, like headers, footers, articles, sidebars, and navigation menus.</p>
+
+<h2 id="part-2-inputs-and-buttons">Part 2: Inputs and buttons</h2>
+
+<h2 id="part-3-layout-with-css">Part 3: Layout with CSS</h2>
+
+<h3 id="the-css-box-model">The CSS Box Model</h3>
+
+<!-- composing selectors with parent-child hierarchies -->
+
+<h2 id="part-4-let-s-build-a-form">Part 4: Let&rsquo;s build a form!</h2>
+
+<h2 id="milestone-2-recap">Milestone 2 recap</h2>
+
+        </article>
+        </div>
+    </section>
+</main>
+
+<script>
+    
+    
+
+    const createTryLinkFor = (highlightBox, codeEl) => {
+        if (codeEl) {
+            const cfLink = document.createElement('a');
+            cfLink.classList.add('button');
+            cfLink.classList.add('cfSampleLink');
+            cfLink.href = `https:\/\/beta.codeframe.co\/new?html=${encodeURIComponent(codeEl.textContent)}`;
+            cfLink.target = '_blank';
+            cfLink.textContent = 'Try this →';
+            highlightBox.appendChild(cfLink);
+        }
+    }
+
+    for (const highlightedEl of document.querySelectorAll('.highlight')) {
+        const codeEl
+            = highlightedEl.querySelector('td:last-child code.language-html')
+            || highlightedEl.querySelector('td:last-child code.language-javascript');
+        createTryLinkFor(highlightedEl, codeEl);
+    }
+</script>
+
+
+
+        <footer>
+    <div class="overlay">
+        Zero to Code is a sister project of
+        <a href="https://codeframe.co">Codeframe</a>,
+        made with love by
+        <a href="https://linus.zone/now">Linus</a>.
+    </div>
+</footer>
+
+    </body>
+
+</html>
+
