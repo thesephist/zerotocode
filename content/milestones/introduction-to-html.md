@@ -6,7 +6,8 @@ order: 1
 
 In this milestone, we'll get acquainted with HTML and CSS, two of the key building blocks of every website. Using what we learn, we'll build a very simple About page for you.
 
-<!-- embed finished sample here -->
+This milestone is a bit longer than the usual, and covers more ground than the usual, to help you get up and running. Rather than try to finish everything here in one sitting, find stopping points, and take your time to experiment with code samples provided here to really get a sense of how these key technologies (HTML and CSS) work. At the end of this page, you'll walk away with a simple about page in no time.
+
 
 ## Part 1: HTML Tags and Elements
 
@@ -399,6 +400,33 @@ A list in HTML is actually made up of two different tags: the `<ul>` tag, which 
 
 An `<ol>` produces a list with numbers as labels, instead of bullets.
 
+Here's what my about page's HTML looks like:
+
+{{<highlight html>}}
+<h1>About Linus</h1>
+
+<img src="https://www.ocf.berkeley.edu/~linuslee/pic.jpg" alt="Linus's Profile" />
+
+<p>
+    Linus is a designer and pianist in Berkeley, California.
+</p>
+
+<h2>My travel list</h2>
+<p>
+    I love to travel, but alone and with friends and family.
+    It's liberating and educational and humbling and inspiring,
+    all at the same time.
+</p>
+<ul>
+    <li>Isle of Skye</li>
+    <li>Polynesia</li>
+    <li>Tel Aviv</li>
+    <li>Monaco</li>
+    <li>Santorini</li>
+</ul>
+
+{{</highlight>}}
+
 ### Adding styles with CSS
 
 Now that you have some content for your about page, let's make it look a bit prettier.
@@ -412,6 +440,8 @@ One change that you might be itching to make is to change the font on your page 
         font-family: sans-serif;
     }
 </style>
+
+<h1>About ...</h1>
 {{</highlight>}}
 
 What's `sans-serif`? "Serif" and "sans-serif" are two styles of fonts, or font families. You can read more about their difference [here](https://about.easil.com/support/serif-vs-sans-serif/), but this should give your text a bit of a modern facelift.
@@ -428,7 +458,25 @@ img {
 
 If you set _both_ width and height, you may find that it distorts the image's aspect ratio.
 
-From here, you can add and apply styles to your HTML page to make it look the way you want. Here's some CSS properties you might find useful as you explore ways to style your about page.
+Another trick up CSS's sleeve is curved corners. By default, all HTML elements are sharp rectangles. But we can adjust the roundedness of corners using the CSS `border-radius` property, like this.
+
+{{<highlight html>}}
+<style>
+    img.first {
+        border-radius: 50%;
+    }
+    img.second {
+        border-radius: 12px;
+    }
+</style>
+
+<img class="first"
+    src="https://www.ocf.berkeley.edu/~linuslee/pic.jpg" alt="Linus's Profile" />
+<img class="second"
+    src="https://www.ocf.berkeley.edu/~linuslee/pic.jpg" alt="Linus's Profile" />
+{{</highlight>}}
+
+This may be useful if you want your picture or boxes to have a rounder, softer look. From here, you can add and apply styles to your HTML page to make it look the way you want. Here's some CSS properties you might find useful as you explore ways to style your about page.
 
 #### Adding borders around things
 
@@ -440,17 +488,21 @@ Here's an example of a paragraph with a border around it:
 
 This border was added with this CSS:
 
-{{<highlight css>}}
-p.purple-border {
-    border-width: 5px;
-    border-style: solid;
-    border-color: purple;
-}
+{{<highlight html>}}
+<style>
+    p.purple-border {
+        border-width: 5px;
+        border-style: solid;
+        border-color: purple;
+    }
 
-/* We can also write this in shorthand, like this */
-p.purple-border {
-    border: 5px solid purple;
-}
+    /* We can also write this in shorthand, like this */
+    p.purple-border {
+        border: 5px solid purple;
+    }
+</style>
+
+<p class="purple-border">I've got a border around me!</p>
 {{</highlight>}}
 
 Experiment with different values for border thickness (`border-width`), color, and style (you can pick between `dotted`, `dashed`, and `solid`) to see what you like.
@@ -478,13 +530,13 @@ This will add 8 pixels of breathing room around our paragraph, like this:
 
 #### Curved corners with `border-radius`
 
-Another neat trick is to add some curved corners around our boxes, like this:
+We can add curved corners to our text boxes as well, like this:
 
 <p style="border: 5px solid purple; padding: 8px; border-radius: 10px">
     I've got a border around me!
 </p>
 
-We can add curves to borders using the `border-radius` property, which looks like this:
+This radius above is 10px wide.
 
 {{<highlight css "hl_lines=4">}}
 p.purple-border {
@@ -493,3 +545,35 @@ p.purple-border {
     border-radius: 10px;
 }
 {{</highlight>}}
+
+#### Background color
+
+We can add a background color with the `background` or `background-color` property (they're synonymous for our purposes here).
+
+<p style="border: 5px solid purple; padding: 8px; border-radius: 10px;background: lavender">
+    I've got a border around me!
+</p>
+
+This radius above is 10px wide.
+
+{{<highlight css "hl_lines=5">}}
+p.purple-border {
+    border: 5px solid purple;
+    padding: 8px;
+    border-radius: 10px;
+    background: lavender;
+}
+{{</highlight>}}
+
+Once you've arrived at an about page that fits your taste, _please share it!_ Use that <span class="inline fixed button">Preview</span> button to send me a link to what you're making! I'd love to hear from you and see where you are.
+
+## Milestone 1 recap
+
+Congratulations on making it to the end of the first milestone! This was a long one, but we've learned a lot already that we'll use and carry with us through the rest of the course. Specifically, we learned about...
+
+- How HTML tags work to structure our webpage, and some common tags like `<p>`, `<h1>`, and `<img>`
+- How tu write CSS to go along with your HTML, to change the look and feel of your HTML tags
+- How to use selectors and CSS classes to write CSS rules for specific elements on the page
+- Some common CSS properties, like color, background, border, and padding.
+
+Next milestone, we'll pick up where we left off and continue exploring HTML and CSS in more depth.
