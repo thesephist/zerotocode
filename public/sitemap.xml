@@ -8,11 +8,6 @@
   </url>
   
   <url>
-    <loc>https://zerotocode.org/milestones/</loc>
-    <lastmod>2019-04-08T03:56:54-07:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://zerotocode.org/milestones/introduction-to-html/</loc>
     <lastmod>2019-04-03T09:11:18-07:00</lastmod>
   </url>
@@ -23,12 +18,18 @@
   </url>
   
   <url>
-    <loc>https://zerotocode.org/</loc>
+    <loc>https://zerotocode.org/about/</loc>
     <lastmod>2019-04-03T01:11:34-07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zerotocode.org/about/</loc>
+    <loc>https://zerotocode.org/milestones/</loc>
+    <lastmod>2019-04-03T01:11:34-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zerotocode.org/</loc>
+    <lastmod>2019-04-03T01:11:34-07:00</lastmod>
   </url>
   
   <url>
