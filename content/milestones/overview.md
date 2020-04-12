@@ -45,7 +45,7 @@ If you're interested in learning about any of these topics, the aren't out of th
 You can edit the HTML, CSS (inside the `<style>` block), and JavaScript code on the right/bottom pane, and see the result on the left/top pane as you type. If you want to save or share what you've made, you can hit the <span class="fixed inline button">Save &amp; Reload</span> button to save your work, which will give you a link and a preview button you can use to share what you've made with anyone else on the planet, just by sharing that link!
 
 <div class="liveEditorContainer fixed button">
-    <iframe src="https://beta.codeframe.co/new?from=ztc_about" frameborder="0" class="liveEditor"></iframe>
+    <iframe src="https://codeframe.co/new?from=ztc_about" frameborder="0" class="liveEditor"></iframe>
 </div>
 
 For a gentle introduction to Codeframe, let's write some HTML! Make sure the <span class="fixed inline active button">HTML</span> mode is selected (it is by default), and type this snippet of HTML code into the editor pane on the right/bottom, replacing `[your name]` with your name:
